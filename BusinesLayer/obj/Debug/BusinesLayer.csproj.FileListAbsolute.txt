@@ -1,0 +1,9 @@
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\bin\Debug\BusinesLayer.dll
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\bin\Debug\BusinesLayer.pdb
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\obj\Debug\BusinesLayer.csproj.AssemblyReference.cache
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\obj\Debug\BusinesLayer.csproj.CoreCompileInputs.cache
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\obj\Debug\BusinesLayer.dll
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\obj\Debug\BusinesLayer.pdb
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\bin\Debug\DataLayer.dll
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\bin\Debug\DataLayer.pdb
+C:\Users\abdi\Pictures\Training Center\BusinesLayer\obj\Debug\BusinesL.4531A082.Up2Date

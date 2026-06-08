@@ -1,0 +1,9 @@
+C:\Users\abdi\Pictures\Training Center\BusLayaer\bin\Debug\BusLayaer.dll
+C:\Users\abdi\Pictures\Training Center\BusLayaer\bin\Debug\BusLayaer.pdb
+C:\Users\abdi\Pictures\Training Center\BusLayaer\bin\Debug\DataLayer.dll
+C:\Users\abdi\Pictures\Training Center\BusLayaer\bin\Debug\DataLayer.pdb
+C:\Users\abdi\Pictures\Training Center\BusLayaer\obj\Debug\BusLayaer.csproj.AssemblyReference.cache
+C:\Users\abdi\Pictures\Training Center\BusLayaer\obj\Debug\BusLayaer.csproj.CoreCompileInputs.cache
+C:\Users\abdi\Pictures\Training Center\BusLayaer\obj\Debug\BusLayaer.csproj.Up2Date
+C:\Users\abdi\Pictures\Training Center\BusLayaer\obj\Debug\BusLayaer.dll
+C:\Users\abdi\Pictures\Training Center\BusLayaer\obj\Debug\BusLayaer.pdb

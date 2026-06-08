@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BusLayaer/BusLayaer.csproj" Id="011f4e6c-1e61-4ff1-bc9e-c7c5c3cbb268" />
+  <Project Path="DataLayer/DataLayer.csproj" Id="7c911367-e82d-4d0b-ac99-cbd66958b826" />
+  <Project Path="Training Center.csproj" Id="a7b73416-2b73-4296-98fd-ddb515371a16" />
+</Solution>

@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Training Center.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]
