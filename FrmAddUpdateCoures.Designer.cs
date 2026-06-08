@@ -36,22 +36,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.RdYes = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtprice = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dtpDateOfstart = new System.Windows.Forms.DateTimePicker();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtHourse = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbHourse = new System.Windows.Forms.Label();
             this.lbDateofstart = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.lblPersonID = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,21 +69,21 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.RdYes);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtprice);
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.dtpDateOfstart);
-            this.groupBox1.Controls.Add(this.txtPhone);
+            this.groupBox1.Controls.Add(this.txtHourse);
             this.groupBox1.Controls.Add(this.pictureBox8);
             this.groupBox1.Controls.Add(this.pictureBox5);
             this.groupBox1.Controls.Add(this.lbPrice);
             this.groupBox1.Controls.Add(this.lbHourse);
             this.groupBox1.Controls.Add(this.lbDateofstart);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtFirstName);
-            this.groupBox1.Location = new System.Drawing.Point(36, 104);
+            this.groupBox1.Controls.Add(this.txtTitle);
+            this.groupBox1.Location = new System.Drawing.Point(32, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(721, 334);
+            this.groupBox1.Size = new System.Drawing.Size(731, 334);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -91,6 +91,7 @@
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Image = global::Training_Center.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(427, 260);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -99,10 +100,12 @@
             this.btnClose.TabIndex = 166;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Image = global::Training_Center.Properties.Resources.Save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(561, 260);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -111,6 +114,7 @@
             this.btnSave.TabIndex = 165;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label7
             // 
@@ -163,15 +167,15 @@
             this.label2.TabIndex = 160;
             this.label2.Text = "IsActive :";
             // 
-            // textBox1
+            // txtprice
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 136);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 27);
-            this.textBox1.TabIndex = 159;
+            this.txtprice.Location = new System.Drawing.Point(166, 136);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtprice.MaxLength = 50;
+            this.txtprice.Multiline = true;
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(167, 27);
+            this.txtprice.TabIndex = 159;
             // 
             // pictureBox4
             // 
@@ -205,15 +209,15 @@
             this.dtpDateOfstart.TabIndex = 155;
             this.dtpDateOfstart.Value = new System.DateTime(2010, 7, 21, 0, 0, 0, 0);
             // 
-            // txtPhone
+            // txtHourse
             // 
-            this.txtPhone.Location = new System.Drawing.Point(533, 131);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPhone.MaxLength = 50;
-            this.txtPhone.Multiline = true;
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(167, 23);
-            this.txtPhone.TabIndex = 156;
+            this.txtHourse.Location = new System.Drawing.Point(533, 131);
+            this.txtHourse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHourse.MaxLength = 50;
+            this.txtHourse.Multiline = true;
+            this.txtHourse.Name = "txtHourse";
+            this.txtHourse.Size = new System.Drawing.Size(167, 23);
+            this.txtHourse.TabIndex = 156;
             // 
             // pictureBox8
             // 
@@ -280,19 +284,19 @@
             this.label1.Text = "Title";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtFirstName
+            // txtTitle
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(166, 85);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtFirstName.MaxLength = 50;
-            this.txtFirstName.Multiline = true;
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(167, 27);
-            this.txtFirstName.TabIndex = 143;
+            this.txtTitle.Location = new System.Drawing.Point(166, 85);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTitle.MaxLength = 50;
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(167, 27);
+            this.txtTitle.TabIndex = 143;
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(178, 70);
+            this.pictureBox10.Location = new System.Drawing.Point(172, 81);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(31, 26);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,7 +307,7 @@
             // 
             this.lblPersonID.AutoSize = true;
             this.lblPersonID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonID.Location = new System.Drawing.Point(228, 70);
+            this.lblPersonID.Location = new System.Drawing.Point(222, 81);
             this.lblPersonID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersonID.Name = "lblPersonID";
             this.lblPersonID.Size = new System.Drawing.Size(38, 20);
@@ -314,30 +318,30 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(50, 70);
+            this.label22.Location = new System.Drawing.Point(44, 81);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(105, 20);
             this.label22.TabIndex = 118;
             this.label22.Text = "Country ID :";
             // 
-            // lblTitle
+            // Title
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(16, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(741, 39);
-            this.lblTitle.TabIndex = 121;
-            this.lblTitle.Text = "Add New Course";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Title.Location = new System.Drawing.Point(43, 28);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(720, 39);
+            this.Title.TabIndex = 121;
+            this.Title.Text = "Add New Course";
+            this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmAddUpdateCoures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 471);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.lblPersonID);
             this.Controls.Add(this.label22);
@@ -363,15 +367,15 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DateTimePicker dtpDateOfstart;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtHourse;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbHourse;
         private System.Windows.Forms.Label lbDateofstart;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.TextBox txtprice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton RbNo;
@@ -380,7 +384,7 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label lblPersonID;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
     }

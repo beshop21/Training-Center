@@ -37,15 +37,15 @@ namespace Training_Center
         {
             if (Mode == EnMOde.addnew)
             {
-                lblTitle.Text = "Add New Course";
+                Title.Text = "Add New Courses";
             }
             else
-                lblTitle.Text = "Update Course ";
+                Title.Text = "Update Course ";
 
-            lblTitle.Text = "";
+            Title.Text = "";
             lbPrice.Text = "";
             dtpDateOfstart.Value = DateTime.Now;
-            lbHourse.Text = "";
+            txtHourse.Text = "";
             RdYes.Checked = true;
             
             
@@ -61,7 +61,7 @@ namespace Training_Center
                 return;
             }
             lblPersonID.Text = Courseinfo.CourseID.ToString();
-            lblTitle.Text = Courseinfo.Title;
+            Title.Text = Courseinfo.Title;
             lbPrice.Text = Courseinfo.Price.ToString();
             lbHourse.Text = Courseinfo.Hourse.ToString();
             if (Courseinfo.IsActive = true)
@@ -82,7 +82,39 @@ namespace Training_Center
 
         private void FrmAddUpdateCoures_Load(object sender, EventArgs e)
         {
+            _RestDefult();
+            if (Mode == EnMOde.update)
+            {
+                _LoadData();
+            }
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            Courseinfo.Title = txtTitle.Text;
+            Courseinfo.Hourse =Convert.ToInt16 (txtHourse.Text);
+            Courseinfo.Price = Convert.ToInt16(txtprice.Text);
+            Courseinfo.StartDate = dtpDateOfstart.Value;
+            if (RdYes.Checked)
+            {
+                Courseinfo.IsActive = true;
+            }
+            else
+                Courseinfo.IsActive = false;
+
+            if (Courseinfo.Save())
+            {
+                MessageBox.Show("This Course is Save Successfully");
+                lblPersonID.Text = Courseinfo.CourseID.ToString();
+            }
+            else
+                MessageBox.Show("there is Erorr please cheack");
         }
     }
 }
