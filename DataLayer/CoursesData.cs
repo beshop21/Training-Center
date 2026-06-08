@@ -116,18 +116,18 @@ namespace DataLayer
         }
 
 
-        public static bool GetCourseByname(ref int id, string Title, ref int Hourse,
+        public static bool GetCourseByID( int id, ref string Title, ref int Hourse,
     ref float Price, ref DateTime StartDate, ref bool IsActive)
         {
             bool isfound = false;
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string qeury = "select * from Courses where Title=@Title";
+            string qeury = "select * from Courses where CourseID=@CourseID";
 
             SqlCommand commd = new SqlCommand(qeury, connection);
 
-            commd.Parameters.AddWithValue("@Title", Title);
+            commd.Parameters.AddWithValue("@CourseID", id);
 
             try
             {
@@ -138,7 +138,7 @@ namespace DataLayer
                 if (reader.Read())
                 {
                     isfound = true;
-                    id = (int)reader["CourseID"];
+                    id = (int)reader["Title"];
                     Hourse = (int)reader["Hourse"];
                     Price = Convert.ToSingle(reader["Price"]);
                     StartDate = (DateTime)reader["StartDate"];

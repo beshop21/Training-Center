@@ -84,13 +84,13 @@ namespace BusLayaer
         }
 
 
-        public ClsCourses Find(string name)
+        public static ClsCourses Find(int Id)
         {
 
-            int Id = -1; string title = ""; int hourse = -1; float price = -1;
+            string name=""; string title = ""; int hourse = -1; float price = -1;
             DateTime startdate = DateTime.Now; bool isactive = false;
 
-            if (CoursesData.GetCourseByname(ref Id, name, ref hourse, ref price, ref startdate, ref isactive))
+            if (CoursesData.GetCourseByID( Id, ref name, ref hourse, ref price, ref startdate, ref isactive))
             {
                 return new ClsCourses(Id, name, hourse, price, startdate, isactive);
 
