@@ -22,5 +22,11 @@ namespace Training_Center
             Form frm = new FrmStudents();
             frm.ShowDialog();
         }
+
+        private void CoursestoolStrip_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmLIstOfcourses();
+            frm.ShowDialog();
+        }
     }
 }

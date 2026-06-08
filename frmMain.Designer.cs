@@ -71,6 +71,7 @@
             this.CoursestoolStrip.Name = "CoursestoolStrip";
             this.CoursestoolStrip.Size = new System.Drawing.Size(145, 68);
             this.CoursestoolStrip.Text = "Courses";
+            this.CoursestoolStrip.Click += new System.EventHandler(this.CoursestoolStrip_Click);
             // 
             // EnrollmentstoolStrip
             // 
@@ -110,14 +111,14 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Main
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TrainingStrip);
-            this.Name = "Main";
+            this.Name = "frmMain";
             this.Text = "FrmMain";
             this.TrainingStrip.ResumeLayout(false);
             this.TrainingStrip.PerformLayout();

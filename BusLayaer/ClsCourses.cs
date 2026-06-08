@@ -1,6 +1,7 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -105,7 +106,10 @@ namespace BusLayaer
             return CoursesData.DeleteCourse(id);
         }
 
-
+        public static DataTable Getall()
+        {
+            return CoursesData.GetAllRecode();
+        }
 
     }
 }

@@ -49,11 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAddUpdateCoures.cs">
+    <Compile Include="Courses\FrmAddUpdateCoures.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddUpdateCoures.Designer.cs">
+    <Compile Include="Courses\FrmAddUpdateCoures.Designer.cs">
       <DependentUpon>FrmAddUpdateCoures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\frmLIstOfcourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Courses\frmLIstOfcourses.Designer.cs">
+      <DependentUpon>frmLIstOfcourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCourseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCourseDetails.Designer.cs">
+      <DependentUpon>FrmCourseDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
@@ -87,8 +99,20 @@
     <Compile Include="Students\Controles\UsStudentDetials.Designer.cs">
       <DependentUpon>UsStudentDetials.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmAddUpdateCoures.resx">
+    <Compile Include="UsCoursesInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsCoursesInfo.Designer.cs">
+      <DependentUpon>UsCoursesInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Courses\FrmAddUpdateCoures.resx">
       <DependentUpon>FrmAddUpdateCoures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Courses\frmLIstOfcourses.resx">
+      <DependentUpon>frmLIstOfcourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCourseDetails.resx">
+      <DependentUpon>FrmCourseDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddAndUpdateStudents.resx">
       <DependentUpon>AddAndUpdateStudents.cs</DependentUpon>
@@ -114,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="Students\Controles\UsStudentDetials.resx">
       <DependentUpon>UsStudentDetials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsCoursesInfo.resx">
+      <DependentUpon>UsCoursesInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -205,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Passed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestType 512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

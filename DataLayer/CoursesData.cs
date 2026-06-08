@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -57,19 +58,20 @@ namespace DataLayer
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
             string qeury = @"update Courses set 
-                          Title=Title,
-                          Hourse=Hourse,
-                          Price=Price,
-                          StartDate=StartDate,
-                          IsActive=IsActive CourseID=CourseID";
+                          Title=@Title,
+                          Hourse=@Hourse,
+                          Price=@Price,
+                          StartDate=@StartDate,
+                          IsActive=@IsActive where CourseID=@CourseID";
 
             SqlCommand comnd = new SqlCommand(qeury, connection);
 
             comnd.Parameters.AddWithValue("@CourseID", id);
             comnd.Parameters.AddWithValue("@Title", title);
-            comnd.Parameters.AddWithValue("@Hours", hours);
+            comnd.Parameters.AddWithValue("@Hourse", hours);
             comnd.Parameters.AddWithValue("@Price", price);
             comnd.Parameters.AddWithValue("@StartDate", startdate);
+           
             comnd.Parameters.AddWithValue("@IsActive", isactive);
 
             try
@@ -96,12 +98,13 @@ namespace DataLayer
             int effectnumber = -1;
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string query = "delete from Courses where CourseID=CourseID";
+            string query = "delete from Courses where CourseID=@CourseID";
             SqlCommand commd = new SqlCommand(query, connection);
-            commd.Parameters.AddWithValue("@StudentID", id);
+            commd.Parameters.AddWithValue("@CourseID", id);
             try
             {
-
+                connection.Open();
+                effectnumber = commd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -138,7 +141,7 @@ namespace DataLayer
                 if (reader.Read())
                 {
                     isfound = true;
-                    id = (int)reader["Title"];
+                    Title = (string)reader["Title"];
                     Hourse = (int)reader["Hourse"];
                     Price = Convert.ToSingle(reader["Price"]);
                     StartDate = (DateTime)reader["StartDate"];
@@ -160,6 +163,33 @@ namespace DataLayer
         }
 
 
+
+        public static DataTable GetAllRecode()
+        {
+            DataTable tb = new DataTable();
+            SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
+            string query = "select * from Courses";
+            SqlCommand command = new SqlCommand(query, connection);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    tb.Load(reader);
+                }
+                reader.Close();
+            }catch(Exception ex)
+            {
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+            return tb;
+        }
 
     }
 }

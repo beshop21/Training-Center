@@ -43,7 +43,7 @@ namespace Training_Center
                 Title.Text = "Update Course ";
 
             Title.Text = "";
-            lbPrice.Text = "";
+           
             dtpDateOfstart.Value = DateTime.Now;
             txtHourse.Text = "";
             RdYes.Checked = true;
@@ -61,9 +61,9 @@ namespace Training_Center
                 return;
             }
             lblPersonID.Text = Courseinfo.CourseID.ToString();
-            Title.Text = Courseinfo.Title;
-            lbPrice.Text = Courseinfo.Price.ToString();
-            lbHourse.Text = Courseinfo.Hourse.ToString();
+            txtTitle.Text = Courseinfo.Title;
+            txtprice.Text = Courseinfo.Price.ToString();
+            txtHourse.Text = Courseinfo.Hourse.ToString();
             if (Courseinfo.IsActive = true)
             {
                 RdYes.Checked = true;
@@ -115,6 +115,11 @@ namespace Training_Center
             }
             else
                 MessageBox.Show("there is Erorr please cheack");
+        }
+
+        private void Title_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

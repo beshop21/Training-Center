@@ -335,6 +335,7 @@
             this.Title.TabIndex = 121;
             this.Title.Text = "Add New Course";
             this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Title.Click += new System.EventHandler(this.Title_Click);
             // 
             // FrmAddUpdateCoures
             // 

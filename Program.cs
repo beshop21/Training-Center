@@ -16,7 +16,7 @@ namespace Training_Center
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAddUpdateCoures());
+            Application.Run(new frmMain());
         }
     }
 }
