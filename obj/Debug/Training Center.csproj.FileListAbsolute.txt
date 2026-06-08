@@ -17,3 +17,4 @@ C:\Users\abdi\Pictures\Training Center\bin\Debug\DataLayer.pdb
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training.25908653.Up2Date
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsStudentDetials.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmStudentDetails.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmAddUpdateCoures.resources

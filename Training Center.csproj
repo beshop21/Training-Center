@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAddUpdateCoures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddUpdateCoures.Designer.cs">
+      <DependentUpon>FrmAddUpdateCoures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Students\Controles\UsStudentDetials.Designer.cs">
       <DependentUpon>UsStudentDetials.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAddUpdateCoures.resx">
+      <DependentUpon>FrmAddUpdateCoures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students\AddAndUpdateStudents.resx">
       <DependentUpon>AddAndUpdateStudents.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +194,17 @@
   <ItemGroup>
     <None Include="Resources\Delete 32 2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Passed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
