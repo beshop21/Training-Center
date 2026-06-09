@@ -15,7 +15,8 @@ namespace DataLayer
             int StudentId = -1;
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
-            string qeury = @"insert into Students (FirstName,SecondName,ThirdName,phone,Email,DateoFBirth,CreatedAt) values(@FirstName,@SecondName,@ThirdName,@phone,@Email,@DateoFBirth,@CreatedAt);select SCOPE_IDENTITY();";
+            string qeury = @"insert into Students (FirstName,SecondName,ThirdName,phone,Email,DateoFBirth,CreatedAt) 
+                                                   values(@FirstName,@SecondName,@ThirdName,@phone,@Email,@DateoFBirth,@CreatedAt);select SCOPE_IDENTITY();";
 
             SqlCommand comnd = new SqlCommand(qeury, connection);
 
