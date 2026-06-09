@@ -67,6 +67,12 @@
     <Compile Include="FrmCourseDetails.Designer.cs">
       <DependentUpon>FrmCourseDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEnrollmentAddUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnrollmentAddUpdate.Designer.cs">
+      <DependentUpon>FrmEnrollmentAddUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
     </Compile>
