@@ -101,6 +101,26 @@ namespace BusLayaer
 
         }
 
+
+        public static ClsCourses Find(string title)
+        {
+
+            int Id=-1;  int hourse = -1; float price = -1;
+            DateTime startdate = DateTime.Now; bool isactive = false;
+
+            if (CoursesData.GetCourseByName(ref Id, title, ref hourse, ref price, ref startdate, ref isactive))
+            {
+                return new ClsCourses(Id, title, hourse, price, startdate, isactive);
+
+            }
+            else
+                return null;
+
+        }
+
+
+
+
         public static bool Delete(int id)
         {
             return CoursesData.DeleteCourse(id);

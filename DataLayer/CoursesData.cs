@@ -162,7 +162,48 @@ namespace DataLayer
             return isfound;
         }
 
+        public static bool GetCourseByName(ref int id,  string Title, ref int Hourse,
+  ref float Price, ref DateTime StartDate, ref bool IsActive)
+        {
+            bool isfound = false;
 
+            SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
+
+            string qeury = "select * from Courses where Title=@Title";
+
+            SqlCommand commd = new SqlCommand(qeury, connection);
+
+            commd.Parameters.AddWithValue("@Title", Title);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = commd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isfound = true;
+                    id = (int)reader["CourseID"];
+                    Hourse = (int)reader["Hourse"];
+                    Price = Convert.ToSingle(reader["Price"]);
+                    StartDate = (DateTime)reader["StartDate"];
+                    IsActive = (bool)reader["IsActive"];
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isfound;
+        }
 
         public static DataTable GetAllRecode()
         {
