@@ -64,7 +64,7 @@ namespace Training_Center
             txtTitle.Text = Courseinfo.Title;
             txtprice.Text = Courseinfo.Price.ToString();
             txtHourse.Text = Courseinfo.Hourse.ToString();
-            if (Courseinfo.IsActive = true)
+            if (Courseinfo.IsActive == true)
             {
                 RdYes.Checked = true;
             }

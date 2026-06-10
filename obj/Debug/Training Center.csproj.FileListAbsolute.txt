@@ -1,23 +1,27 @@
 C:\Users\abdi\Pictures\Training Center\bin\Debug\Training Center.exe.config
 C:\Users\abdi\Pictures\Training Center\bin\Debug\Training Center.exe
 C:\Users\abdi\Pictures\Training Center\bin\Debug\Training Center.pdb
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.csproj.AssemblyReference.cache
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.Properties.Resources.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.csproj.GenerateResource.cache
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.csproj.CoreCompileInputs.cache
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.exe
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.pdb
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.AddAndUpdateStudents.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmStudents.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmMain.resources
 C:\Users\abdi\Pictures\Training Center\bin\Debug\BusLayaer.dll
 C:\Users\abdi\Pictures\Training Center\bin\Debug\DataLayer.dll
 C:\Users\abdi\Pictures\Training Center\bin\Debug\BusLayaer.pdb
 C:\Users\abdi\Pictures\Training Center\bin\Debug\DataLayer.pdb
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training.25908653.Up2Date
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsStudentDetials.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmStudentDetails.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.csproj.AssemblyReference.cache
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmAddUpdateCoures.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmLIstOfcourses.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsCoursesInfo.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmCourseDetails.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.AddAndUpdateStudents.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmStudentDetails.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmStudents.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmMain.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.Properties.Resources.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsStudentDetials.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsCoursesInfo.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.csproj.GenerateResource.cache
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.csproj.CoreCompileInputs.cache
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training.25908653.Up2Date
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.exe
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.pdb
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UscCourseDetailsWithFilter.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmFindCourse.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UscStudentFilter.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmFindStudent.resources

@@ -31,6 +31,27 @@ namespace Training_Center
             if (course == null)
             {
                 MessageBox.Show("This Course is Not Exist");
+                return;
+            }
+            lblPersonID.Text = course.CourseID.ToString();
+            lbTitle.Text = course.Title;
+            lbHourse.Text = course.Hourse.ToString();
+            lbPrice.Text = course.Price.ToString();
+            lbStartDate.Text = course.StartDate.ToString();
+            if (course.IsActive == true)
+            {
+                lbIsActive.Text = "True";
+            }
+            else
+                lbIsActive.Text = "false";
+        }
+
+        public void LoadInfo(string name)
+        {
+            course = ClsCourses.Find(name);
+            if (course == null)
+            {
+                MessageBox.Show("This Course is Not Exist");
             }
             lblPersonID.Text = course.CourseID.ToString();
             lbTitle.Text = course.Title;

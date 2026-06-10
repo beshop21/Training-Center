@@ -73,6 +73,18 @@
     <Compile Include="FrmEnrollmentAddUpdate.Designer.cs">
       <DependentUpon>FrmEnrollmentAddUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFindCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindCourse.Designer.cs">
+      <DependentUpon>frmFindCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindStudent.Designer.cs">
+      <DependentUpon>frmFindStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +117,23 @@
     <Compile Include="Students\Controles\UsStudentDetials.Designer.cs">
       <DependentUpon>UsStudentDetials.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsCoursesInfo.cs">
+    <Compile Include="Courses\Controls\UscCourseDetailsWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UsCoursesInfo.Designer.cs">
+    <Compile Include="Courses\Controls\UscCourseDetailsWithFilter.Designer.cs">
+      <DependentUpon>UscCourseDetailsWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Courses\Controls\UsCoursesInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Courses\Controls\UsCoursesInfo.Designer.cs">
       <DependentUpon>UsCoursesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UscStudentFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UscStudentFilter.Designer.cs">
+      <DependentUpon>UscStudentFilter.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Courses\FrmAddUpdateCoures.resx">
       <DependentUpon>FrmAddUpdateCoures.cs</DependentUpon>
@@ -119,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Courses\FrmCourseDetails.resx">
       <DependentUpon>FrmCourseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindCourse.resx">
+      <DependentUpon>frmFindCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindStudent.resx">
+      <DependentUpon>frmFindStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddAndUpdateStudents.resx">
       <DependentUpon>AddAndUpdateStudents.cs</DependentUpon>
@@ -145,8 +175,14 @@
     <EmbeddedResource Include="Students\Controles\UsStudentDetials.resx">
       <DependentUpon>UsStudentDetials.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsCoursesInfo.resx">
+    <EmbeddedResource Include="Courses\Controls\UscCourseDetailsWithFilter.resx">
+      <DependentUpon>UscCourseDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Courses\Controls\UsCoursesInfo.resx">
       <DependentUpon>UsCoursesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UscStudentFilter.resx">
+      <DependentUpon>UscStudentFilter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -242,8 +278,9 @@
   <ItemGroup>
     <None Include="Resources\TestType 512.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Courses\Controls\" />
+    <None Include="Resources\SearchPerson.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
