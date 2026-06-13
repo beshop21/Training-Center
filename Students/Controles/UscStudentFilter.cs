@@ -37,5 +37,10 @@ namespace Training_Center
         {
             FindNow();
         }
+
+        private void txtFilterValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

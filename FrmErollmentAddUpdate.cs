@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Training_Center
 {
-    public partial class FrmEnrollmentAddUpdate : Form
+    public partial class FrmErollmentAddUpdate : Form
     {
-        public FrmEnrollmentAddUpdate()
+        public FrmErollmentAddUpdate()
         {
             InitializeComponent();
         }

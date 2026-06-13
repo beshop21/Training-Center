@@ -30,10 +30,10 @@
         {
             this.gbFilters = new System.Windows.Forms.GroupBox();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
+            this.btnFind = new System.Windows.Forms.Button();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnFind = new System.Windows.Forms.Button();
             this.usCoursesInfo1 = new Training_Center.UsCoursesInfo();
             this.gbFilters.SuspendLayout();
             this.SuspendLayout();
@@ -45,9 +45,9 @@
             this.gbFilters.Controls.Add(this.cbFilterBy);
             this.gbFilters.Controls.Add(this.txtFilterValue);
             this.gbFilters.Controls.Add(this.label1);
-            this.gbFilters.Location = new System.Drawing.Point(15, 27);
+            this.gbFilters.Location = new System.Drawing.Point(15, 56);
             this.gbFilters.Name = "gbFilters";
-            this.gbFilters.Size = new System.Drawing.Size(734, 77);
+            this.gbFilters.Size = new System.Drawing.Size(561, 63);
             this.gbFilters.TabIndex = 17;
             this.gbFilters.TabStop = false;
             this.gbFilters.Text = "Filter";
@@ -57,12 +57,23 @@
             this.btnAddNewPerson.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddNewPerson.Image = global::Training_Center.Properties.Resources.Add_Person_40;
             this.btnAddNewPerson.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewPerson.Location = new System.Drawing.Point(594, 20);
+            this.btnAddNewPerson.Location = new System.Drawing.Point(561, 21);
             this.btnAddNewPerson.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddNewPerson.Name = "btnAddNewPerson";
             this.btnAddNewPerson.Size = new System.Drawing.Size(48, 37);
             this.btnAddNewPerson.TabIndex = 20;
             this.btnAddNewPerson.UseVisualStyleBackColor = true;
+            // 
+            // btnFind
+            // 
+            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFind.Image = global::Training_Center.Properties.Resources.SearchPerson;
+            this.btnFind.Location = new System.Drawing.Point(510, 19);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(44, 37);
+            this.btnFind.TabIndex = 18;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // cbFilterBy
             // 
@@ -71,7 +82,7 @@
             this.cbFilterBy.Items.AddRange(new object[] {
             "ID",
             "Name"});
-            this.cbFilterBy.Location = new System.Drawing.Point(105, 29);
+            this.cbFilterBy.Location = new System.Drawing.Point(72, 27);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(210, 21);
             this.cbFilterBy.TabIndex = 16;
@@ -79,7 +90,7 @@
             // txtFilterValue
             // 
             this.txtFilterValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFilterValue.Location = new System.Drawing.Point(322, 30);
+            this.txtFilterValue.Location = new System.Drawing.Point(289, 30);
             this.txtFilterValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.Size = new System.Drawing.Size(214, 20);
@@ -88,29 +99,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 19;
             this.label1.Text = "Find By:";
-            // 
-            // btnFind
-            // 
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Image = global::Training_Center.Properties.Resources.SearchPerson;
-            this.btnFind.Location = new System.Drawing.Point(543, 20);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(44, 37);
-            this.btnFind.TabIndex = 18;
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // usCoursesInfo1
             // 
             this.usCoursesInfo1.Location = new System.Drawing.Point(15, 138);
             this.usCoursesInfo1.Name = "usCoursesInfo1";
-            this.usCoursesInfo1.Size = new System.Drawing.Size(754, 232);
+            this.usCoursesInfo1.Size = new System.Drawing.Size(642, 173);
             this.usCoursesInfo1.TabIndex = 18;
             this.usCoursesInfo1.Load += new System.EventHandler(this.usCoursesInfo1_Load);
             // 
@@ -121,7 +121,7 @@
             this.Controls.Add(this.usCoursesInfo1);
             this.Controls.Add(this.gbFilters);
             this.Name = "UscCourseDetailsWithFilter";
-            this.Size = new System.Drawing.Size(798, 373);
+            this.Size = new System.Drawing.Size(659, 320);
             this.Load += new System.EventHandler(this.UscCourseDetailsWithFilter_Load);
             this.gbFilters.ResumeLayout(false);
             this.gbFilters.PerformLayout();
