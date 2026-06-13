@@ -22,7 +22,10 @@ namespace Training_Center
             get { return usCoursesInfo1.courseID; }
         }
 
-
+        public string CourseName
+        {
+            get { return usCoursesInfo1.CourseName; }
+        }
 
 
 

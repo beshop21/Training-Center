@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,11 +15,17 @@ namespace Training_Center
     public partial class UsCoursesInfo : UserControl
     {
         private int _CourseID = -1;
+        private string _Name = "";
         ClsCourses course;
 
         public int courseID
         {
             get { return _CourseID; }
+        }
+
+        public string CourseName
+        {
+            get { return _Name; }
         }
         public UsCoursesInfo()
         {
@@ -33,6 +40,8 @@ namespace Training_Center
                 MessageBox.Show("This Course is Not Exist");
                 return;
             }
+            _Name = course.Title;
+            _CourseID = course.CourseID;
             lblPersonID.Text = course.CourseID.ToString();
             lbTitle.Text = course.Title;
             lbHourse.Text = course.Hourse.ToString();
@@ -53,6 +62,8 @@ namespace Training_Center
             {
                 MessageBox.Show("This Course is Not Exist");
             }
+            name = course.Title;
+            _CourseID = course.CourseID;
             lblPersonID.Text = course.CourseID.ToString();
             lbTitle.Text = course.Title;
             lbHourse.Text = course.Hourse.ToString();

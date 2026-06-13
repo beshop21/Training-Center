@@ -16,7 +16,10 @@ namespace Training_Center
         {
             InitializeComponent();
         }
-
+        public int StudentID
+        {
+            get { return usStudentDetials1.ID; }
+        }
         
         private void FindNow()
         {

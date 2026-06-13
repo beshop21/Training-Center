@@ -118,7 +118,12 @@ namespace DataLayer
             cmd.Parameters.AddWithValue("@Statuss", Status);
             cmd.Parameters.AddWithValue("@StudentsID", StudentID);
             cmd.Parameters.AddWithValue("@CoursesID", courseID);
-            cmd.Parameters.AddWithValue("@Grade", Grade);
+            if (Grade != 0)
+            {
+                cmd.Parameters.AddWithValue("@Grade", Grade);
+            }
+            else
+                cmd.Parameters.AddWithValue("@Grade", System.DBNull.Value);
             cmd.Parameters.AddWithValue("@EnrollmentDate", enromentDate);
             cmd.Parameters.AddWithValue("@TotalFee", totalfee);
 
