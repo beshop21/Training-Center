@@ -111,7 +111,7 @@ namespace DataLayer
             int EromentID = -1;
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
             string query = @"insert into Enrollments (Statuss,StudentsID,CoursesID,Grade,EnrollmentDate,TotalFee) 
-                                       value(@Statuss,@StudentsID,@CoursesID,@Grade,@EnrollmentDate,@TotalFee);select SCOPE_IDENTITY();";
+                                         values(@Statuss,@StudentsID,@CoursesID,@Grade,@EnrollmentDate,@TotalFee);select SCOPE_IDENTITY();";
 
             SqlCommand cmd = new SqlCommand(query, connection);
 
