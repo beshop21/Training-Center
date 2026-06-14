@@ -21,7 +21,7 @@ namespace BusLayaer
         public string ThirdName { get; set; }
 
         public string Phone { get; set; }
-
+     
         public string Email { get; set; }
 
         public DateTime DateOfBrith { get; set; }

@@ -60,8 +60,25 @@ namespace Training_Center
         private void _LoadData()
         {
 
-            //Enroollment=ClsEnrollment
+            Enroollment = ClsEnrollment.Find(_Enrollmentid);
+            if (Enroollment == null)
+            {
+                MessageBox.Show("This Enrollment isn't Exist ");
+                return;
+            }
 
+            uscStudentFilter1.Enabled = false;
+            uscCourseDetailsWithFilter1.Enabled = false;
+            tgEdit.Enabled = true;
+            tabControl1.SelectedTab = tabControl1.TabPages["tgEdit"];
+            btnSave.Enabled = true;
+
+            cbStatus.SelectedItem = Enroollment.Status;
+            txtGrade.Text = Enroollment.Grade.ToString();
+            dpEnrollmetDate.Value = Enroollment.EnrollmentDate;
+            txtFee.Text = Enroollment.TotalFee.ToString();
+            lbEnrollmentID.Text = Enroollment.ErollmentiD.ToString();
+            lbCourseName.Text = ClsCourses.Find(Enroollment.CourseID).Title;
 
 
 
@@ -71,6 +88,10 @@ namespace Training_Center
         private void FrmErollmentAddUpdate_Load(object sender, EventArgs e)
         {
             _RestDefuilt();
+            if (Mode == Enmode.update)
+            {
+                _LoadData();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
