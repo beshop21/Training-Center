@@ -56,7 +56,7 @@ namespace BusLayaer
 
 
 
-        private bool _AddNewEnrollmen()
+        private bool _AddNewEnrollment()
         {
             this.ErollmentiD = EnrollmentData.InsertNewEnrollment(this.Status, this.StudentID, this.CourseID, this.Grade, this.EnrollmentDate, this.TotalFee);
             return (this.ErollmentiD != -1);
@@ -64,14 +64,17 @@ namespace BusLayaer
 
         }
 
-
+        private bool _updateEnrollment()
+        {
+            return EnrollmentData.UpdateNewEnrollment(this.ErollmentiD, this.Status, this.StudentID, this.CourseID, this.Grade, this.EnrollmentDate, this.TotalFee);
+        }
 
         public bool Save()
         {
             switch (Mode)
             {
                 case Enmode.addnew:
-                    if (_AddNewEnrollmen())
+                    if (_AddNewEnrollment())
                     {
                         Mode = Enmode.update;
                         return true;
@@ -80,6 +83,17 @@ namespace BusLayaer
                         return false;
             }
             return false;
+        }
+
+
+        public static bool Delete(int id)
+        {
+            return EnrollmentData.DeleteEnrollment(id);
+        }
+
+        public DataTable GetAll()
+        {
+            return EnrollmentData.GetAllRecode();
         }
 
     }

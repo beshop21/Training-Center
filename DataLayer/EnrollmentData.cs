@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -183,7 +184,7 @@ namespace DataLayer
 
 
 
-        public static bool UpdateNewEnrollment(string Status, int StudentID, int courseID, float Grade, DateTime enromentDate, float totalfee)
+        public static bool UpdateNewEnrollment(int id,string Status, int StudentID, int courseID, float Grade, DateTime enromentDate, float totalfee)
         {
             int RowEffect= -1;
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
@@ -191,10 +192,10 @@ namespace DataLayer
                        StudentsID=StudentsID,
 					    CoursesID=CoursesID,
 						Grade=Grade,EnrollmentDate=EnrollmentDate,
-						TotalFee=TotalFee where EnrollmentID=EnrollmentID";
+						TotalFee=TotalFee where EnrollmentID=@EnrollmentID";
 
             SqlCommand cmd = new SqlCommand(query, connection);
-
+            cmd.Parameters.AddWithValue("@EnrollmentID", id);
             cmd.Parameters.AddWithValue("@Statuss", Status);
             cmd.Parameters.AddWithValue("@StudentsID", StudentID);
             cmd.Parameters.AddWithValue("@CoursesID", courseID);
@@ -246,6 +247,34 @@ namespace DataLayer
 
             }
             return (RowEffect > 0);
+        }
+
+
+        public static DataTable GetAllRecode()
+        {
+            DataTable tb = new DataTable();
+
+            SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
+
+            string query = "select * from Enrollments";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    tb.Load(reader);
+                }
+                reader.Close();
+            }catch(Exception ex)
+            {
+                
+            }
+
+            finally { connection.Close();
+            }
+            return tb;
         }
     }
 
