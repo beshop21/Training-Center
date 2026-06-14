@@ -86,7 +86,11 @@ namespace Training_Center
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(Enroollment.IsStudentHasEnrollmentOnthisCourse(uscStudentFilter1.StudentID, uscCourseDetailsWithFilter1.CourseID)){
 
+                MessageBox.Show("This Student Is Enrollment This Course Before ,please choice other One");
+                return;
+            }
 
             Enroollment.Status = cbStatus.SelectedItem.ToString();
             Enroollment.StudentID = uscStudentFilter1.StudentID;

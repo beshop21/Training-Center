@@ -31,7 +31,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tgSearch = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
+            this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
+            this.uscCourseDetailsWithFilter1 = new Training_Center.UscCourseDetailsWithFilter();
             this.tgEdit = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbEnrollmentID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbCourseName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,10 +54,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
-            this.uscCourseDetailsWithFilter1 = new Training_Center.UscCourseDetailsWithFilter();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbEnrollmentID = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tgSearch.SuspendLayout();
             this.tgEdit.SuspendLayout();
@@ -67,10 +67,10 @@
             this.tabControl1.Controls.Add(this.tgSearch);
             this.tabControl1.Controls.Add(this.tgEdit);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 85);
+            this.tabControl1.Location = new System.Drawing.Point(12, 67);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1435, 536);
+            this.tabControl1.Size = new System.Drawing.Size(1435, 554);
             this.tabControl1.TabIndex = 0;
             // 
             // tgSearch
@@ -81,7 +81,7 @@
             this.tgSearch.Location = new System.Drawing.Point(4, 24);
             this.tgSearch.Name = "tgSearch";
             this.tgSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tgSearch.Size = new System.Drawing.Size(1427, 508);
+            this.tgSearch.Size = new System.Drawing.Size(1427, 526);
             this.tgSearch.TabIndex = 0;
             this.tgSearch.Text = "Search";
             this.tgSearch.UseVisualStyleBackColor = true;
@@ -99,6 +99,22 @@
             this.button1.Text = "Next             ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // uscStudentFilter1
+            // 
+            this.uscStudentFilter1.Location = new System.Drawing.Point(700, 29);
+            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.uscStudentFilter1.Name = "uscStudentFilter1";
+            this.uscStudentFilter1.Size = new System.Drawing.Size(641, 389);
+            this.uscStudentFilter1.TabIndex = 1;
+            // 
+            // uscCourseDetailsWithFilter1
+            // 
+            this.uscCourseDetailsWithFilter1.Location = new System.Drawing.Point(21, 6);
+            this.uscCourseDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.uscCourseDetailsWithFilter1.Name = "uscCourseDetailsWithFilter1";
+            this.uscCourseDetailsWithFilter1.Size = new System.Drawing.Size(680, 405);
+            this.uscCourseDetailsWithFilter1.TabIndex = 0;
             // 
             // tgEdit
             // 
@@ -126,6 +142,28 @@
             this.tgEdit.TabIndex = 1;
             this.tgEdit.Text = "Edit";
             this.tgEdit.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(36, 57);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 20);
+            this.label5.TabIndex = 221;
+            this.label5.Text = "Enrollmnet ID :";
+            // 
+            // lbEnrollmentID
+            // 
+            this.lbEnrollmentID.AutoSize = true;
+            this.lbEnrollmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEnrollmentID.Location = new System.Drawing.Point(173, 57);
+            this.lbEnrollmentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEnrollmentID.Name = "lbEnrollmentID";
+            this.lbEnrollmentID.Size = new System.Drawing.Size(53, 20);
+            this.lbEnrollmentID.TabIndex = 222;
+            this.lbEnrollmentID.Text = "[????]";
             // 
             // label4
             // 
@@ -319,44 +357,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // uscStudentFilter1
-            // 
-            this.uscStudentFilter1.Location = new System.Drawing.Point(700, 29);
-            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.uscStudentFilter1.Name = "uscStudentFilter1";
-            this.uscStudentFilter1.Size = new System.Drawing.Size(641, 389);
-            this.uscStudentFilter1.TabIndex = 1;
-            // 
-            // uscCourseDetailsWithFilter1
-            // 
-            this.uscCourseDetailsWithFilter1.Location = new System.Drawing.Point(21, 29);
-            this.uscCourseDetailsWithFilter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.uscCourseDetailsWithFilter1.Name = "uscCourseDetailsWithFilter1";
-            this.uscCourseDetailsWithFilter1.Size = new System.Drawing.Size(680, 405);
-            this.uscCourseDetailsWithFilter1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 57);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 20);
-            this.label5.TabIndex = 221;
-            this.label5.Text = "Enrollmnet ID :";
-            // 
-            // lbEnrollmentID
-            // 
-            this.lbEnrollmentID.AutoSize = true;
-            this.lbEnrollmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnrollmentID.Location = new System.Drawing.Point(173, 57);
-            this.lbEnrollmentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbEnrollmentID.Name = "lbEnrollmentID";
-            this.lbEnrollmentID.Size = new System.Drawing.Size(53, 20);
-            this.lbEnrollmentID.TabIndex = 222;
-            this.lbEnrollmentID.Text = "[????]";
             // 
             // FrmErollmentAddUpdate
             // 

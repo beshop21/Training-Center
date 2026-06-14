@@ -47,6 +47,15 @@ namespace BusLayaer
             Mode = Enmode.update;
         }
 
+
+
+        public bool IsStudentHasEnrollmentOnthisCourse(int StID,int COuID)
+        {
+            return EnrollmentData.IsStudentHaveErollmentOnthisCourse(StID, COuID);
+        }
+
+
+
         private bool _AddNewEnrollmen()
         {
             this.ErollmentiD = EnrollmentData.InsertNewEnrollment(this.Status, this.StudentID, this.CourseID, this.Grade, this.EnrollmentDate, this.TotalFee);
