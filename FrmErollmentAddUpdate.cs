@@ -57,7 +57,16 @@ namespace Training_Center
 
         }
 
+        private void _LoadData()
+        {
 
+            //Enroollment=ClsEnrollment
+
+
+
+
+
+        }
 
         private void FrmErollmentAddUpdate_Load(object sender, EventArgs e)
         {
@@ -108,6 +117,11 @@ namespace Training_Center
 
             else
                 MessageBox.Show("There is Error ,Please check");
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
 
         }
     }

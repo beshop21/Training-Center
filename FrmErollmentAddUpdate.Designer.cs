@@ -138,7 +138,7 @@
             this.tgEdit.Location = new System.Drawing.Point(4, 24);
             this.tgEdit.Name = "tgEdit";
             this.tgEdit.Padding = new System.Windows.Forms.Padding(3);
-            this.tgEdit.Size = new System.Drawing.Size(1427, 508);
+            this.tgEdit.Size = new System.Drawing.Size(1427, 526);
             this.tgEdit.TabIndex = 1;
             this.tgEdit.Text = "Edit";
             this.tgEdit.UseVisualStyleBackColor = true;
@@ -328,6 +328,7 @@
             this.lblTitle.TabIndex = 119;
             this.lblTitle.Text = "Edit Eronllemnt ";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // btnClose
             // 

@@ -141,8 +141,55 @@ namespace DataLayer
 
 
 
+        public static bool GetEnrollmentByEnrollmentID( int EnrollmentID,ref string Status,ref int StudentID, ref int CourseID, ref float Grade, ref DateTime EnrollmentDate,
+  ref float TotalFee)
+        {
+            bool isFound = false;
 
-     public static int InsertNewEnrollment(string Status,int StudentID,int courseID,float Grade,DateTime enromentDate,float totalfee)
+            SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
+
+            string query = "select * from Enrollments where EnrollmentID=@EnrollmentID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@EnrollmentID", EnrollmentID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isFound = true;
+
+                    StudentID = (int)reader["StudentsID"];
+                    Status = (string)reader["Statuss"];
+                    CourseID = (int)reader["Courses"];
+                    Grade = Convert.ToSingle(reader["Grade"]);
+                    EnrollmentDate = (DateTime)reader["EnrollmentDate"];
+                    TotalFee = Convert.ToSingle(reader["TotalFee"]);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle exception if needed
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
+
+
+        public static int InsertNewEnrollment(string Status,int StudentID,int courseID,float Grade,DateTime enromentDate,float totalfee)
         {
             int EromentID = -1;
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);

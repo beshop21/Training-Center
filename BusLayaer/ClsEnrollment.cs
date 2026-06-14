@@ -47,6 +47,18 @@ namespace BusLayaer
             Mode = Enmode.update;
         }
 
+        public static ClsEnrollment Find(int id)
+        {
+            string status = "";
+            int studentid = -1, courseid = -1;
+            float grade = -1;
+            DateTime enrollmentdate = DateTime.Now; float totlafee = -1;
+            if (EnrollmentData.GetEnrollmentByEnrollmentID(id, ref status, ref studentid, ref courseid, ref grade, ref enrollmentdate, ref totlafee)) { 
+                return new ClsEnrollment(id, status, studentid, courseid, grade, enrollmentdate, totlafee);
+            }
+            else
+                return null;
+        }
 
 
         public bool IsStudentHasEnrollmentOnthisCourse(int StID,int COuID)

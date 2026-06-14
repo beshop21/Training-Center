@@ -67,6 +67,12 @@
     <Compile Include="Courses\FrmCourseDetails.Designer.cs">
       <DependentUpon>FrmCourseDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEnrollmentMange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnrollmentMange.Designer.cs">
+      <DependentUpon>FrmEnrollmentMange.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmErollmentAddUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Courses\FrmCourseDetails.resx">
       <DependentUpon>FrmCourseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnrollmentMange.resx">
+      <DependentUpon>FrmEnrollmentMange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmErollmentAddUpdate.resx">
       <DependentUpon>FrmErollmentAddUpdate.cs</DependentUpon>
@@ -292,6 +301,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Calendar 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule Test 5121.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
