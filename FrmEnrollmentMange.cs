@@ -73,5 +73,16 @@ namespace Training_Center
             frm.ShowDialog();
             _GetallEnrollment();
         }
+
+        private void tlsDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tlStripAdd_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmErollmentAddUpdate();
+            frm.ShowDialog();
+        }
     }
 }

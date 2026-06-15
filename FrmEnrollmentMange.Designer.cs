@@ -119,6 +119,7 @@
             this.tlStripAdd.Name = "tlStripAdd";
             this.tlStripAdd.Size = new System.Drawing.Size(225, 46);
             this.tlStripAdd.Text = "Add Enrollment";
+            this.tlStripAdd.Click += new System.EventHandler(this.tlStripAdd_Click);
             // 
             // tlsDelete
             // 
@@ -128,6 +129,7 @@
             this.tlsDelete.Name = "tlsDelete";
             this.tlsDelete.Size = new System.Drawing.Size(225, 46);
             this.tlsDelete.Text = "Delete";
+            this.tlsDelete.Click += new System.EventHandler(this.tlsDelete_Click);
             // 
             // FrmEnrollmentMange
             // 

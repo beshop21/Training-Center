@@ -240,11 +240,11 @@ namespace DataLayer
         {
             int RowEffect= -1;
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
-            string query = @"update Enrollments set Statuss=Statuss,
-                       StudentsID=StudentsID,
-					    CoursesID=CoursesID,
-						Grade=Grade,EnrollmentDate=EnrollmentDate,
-						TotalFee=TotalFee where EnrollmentID=@EnrollmentID";
+            string query = @"update Enrollments set Statuss=@Statuss,
+                       StudentsID=@StudentsID,
+					    CoursesID=@CoursesID,
+						Grade=@Grade,EnrollmentDate=@EnrollmentDate,
+						TotalFee=@TotalFee where EnrollmentID=@EnrollmentID";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@EnrollmentID", id);
