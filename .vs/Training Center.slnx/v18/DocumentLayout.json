@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\abdi\\Pictures\\Training Center\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|c:\\users\\abdi\\pictures\\training center\\frmerollmentaddupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|solutionrelative:frmerollmentaddupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|c:\\users\\abdi\\pictures\\training center\\usenrollmentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|solutionrelative:usenrollmentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|c:\\users\\abdi\\pictures\\training center\\usenrollmentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|solutionrelative:usenrollmentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{011F4E6C-1E61-4FF1-BC9E-C7C5C3CBB268}|BusLayaer\\BusLayaer.csproj|c:\\users\\abdi\\pictures\\training center\\buslayaer\\clsstudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{011F4E6C-1E61-4FF1-BC9E-C7C5C3CBB268}|BusLayaer\\BusLayaer.csproj|solutionrelative:buslayaer\\clsstudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|C:\\Users\\abdi\\Pictures\\Training Center\\frmerollmentaddupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|solutionrelative:frmerollmentaddupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|C:\\Users\\abdi\\Pictures\\Training Center\\frmenrollmentmange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,11 +27,7 @@
       "RelativeMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|solutionrelative:frmenrollmentmange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|C:\\Users\\abdi\\Pictures\\Training Center\\frmerollmentaddupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A7B73416-2B73-4296-98FD-DDB515371A16}|Training Center.csproj|solutionrelative:frmerollmentaddupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C911367-E82D-4D0B-AC99-CBD66958B826}|DataLayer\\DataLayer.csproj|c:\\users\\abdi\\pictures\\training center\\datalayer\\enrollmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7C911367-E82D-4D0B-AC99-CBD66958B826}|DataLayer\\DataLayer.csproj|C:\\Users\\abdi\\Pictures\\Training Center\\datalayer\\enrollmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C911367-E82D-4D0B-AC99-CBD66958B826}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\enrollmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,20 +42,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmErollmentAddUpdate.cs",
-              "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\FrmErollmentAddUpdate.cs",
-              "RelativeDocumentMoniker": "FrmErollmentAddUpdate.cs",
-              "ToolTip": "C:\\Users\\abdi\\Pictures\\Training Center\\FrmErollmentAddUpdate.cs",
-              "RelativeToolTip": "FrmErollmentAddUpdate.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAAAIMAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ClsStudents.cs",
+              "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\BusLayaer\\ClsStudents.cs",
+              "RelativeDocumentMoniker": "BusLayaer\\ClsStudents.cs",
+              "ToolTip": "C:\\Users\\abdi\\Pictures\\Training Center\\BusLayaer\\ClsStudents.cs",
+              "RelativeToolTip": "BusLayaer\\ClsStudents.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADgAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T06:57:59.042Z",
+              "WhenOpened": "2026-06-15T08:13:44.379Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsEnrollmentDetails.cs",
+              "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\UsEnrollmentDetails.cs",
+              "RelativeDocumentMoniker": "UsEnrollmentDetails.cs",
+              "ToolTip": "C:\\Users\\abdi\\Pictures\\Training Center\\UsEnrollmentDetails.cs",
+              "RelativeToolTip": "UsEnrollmentDetails.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACkAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T08:07:52.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsEnrollmentDetails.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\UsEnrollmentDetails.cs",
+              "RelativeDocumentMoniker": "UsEnrollmentDetails.cs",
+              "ToolTip": "C:\\Users\\abdi\\Pictures\\Training Center\\UsEnrollmentDetails.cs [Design]",
+              "RelativeToolTip": "UsEnrollmentDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T08:00:50.703Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -63,19 +96,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "FrmEnrollmentMange.cs [Design]",
               "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\FrmEnrollmentMange.cs",
               "RelativeDocumentMoniker": "FrmEnrollmentMange.cs",
               "ToolTip": "C:\\Users\\abdi\\Pictures\\Training Center\\FrmEnrollmentMange.cs [Design]",
               "RelativeToolTip": "FrmEnrollmentMange.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:23:50.194Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-06-14T16:23:50.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "FrmEnrollmentMange.cs",
               "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\FrmEnrollmentMange.cs",
               "RelativeDocumentMoniker": "FrmEnrollmentMange.cs",
@@ -83,12 +115,11 @@
               "RelativeToolTip": "FrmEnrollmentMange.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAowFQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:30:55.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-14T16:30:55.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "EnrollmentData.cs",
               "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\DataLayer\\EnrollmentData.cs",
               "RelativeDocumentMoniker": "DataLayer\\EnrollmentData.cs",
@@ -96,12 +127,11 @@
               "RelativeToolTip": "DataLayer\\EnrollmentData.cs",
               "ViewState": "AgIAAOwAAAAAAAAAAAAAAO8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T07:38:12.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T07:38:12.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\abdi\\Pictures\\Training Center\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",

@@ -20,6 +20,7 @@ namespace BusLayaer
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
 
+        public string Fullname { get; set; }
         public string Phone { get; set; }
      
         public string Email { get; set; }
@@ -53,6 +54,7 @@ namespace BusLayaer
             this.Email = email;
             this.DateOfBrith = dateofbrith;
             this.CreatedIt = creat;
+            this.Fullname = firtname +" "+ secondname +" "+ thirdname;
             Mode = EnMode.Update;
         }
 

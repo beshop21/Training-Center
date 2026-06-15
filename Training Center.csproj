@@ -129,6 +129,12 @@
     <Compile Include="Students\Controles\UscStudentFilter.Designer.cs">
       <DependentUpon>UscStudentFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsEnrollmentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsEnrollmentDetails.Designer.cs">
+      <DependentUpon>UsEnrollmentDetails.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Courses\FrmAddUpdateCoures.resx">
       <DependentUpon>FrmAddUpdateCoures.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Students\Controles\UscStudentFilter.resx">
       <DependentUpon>UscStudentFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsEnrollmentDetails.resx">
+      <DependentUpon>UsEnrollmentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -286,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Schedule Test 5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

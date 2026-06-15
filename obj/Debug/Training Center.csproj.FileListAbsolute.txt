@@ -25,3 +25,4 @@ C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UscCourseDetail
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UscStudentFilter.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmErollmentAddUpdate.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmEnrollmentMange.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsEnrollmentDetails.resources

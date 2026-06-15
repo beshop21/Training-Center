@@ -213,6 +213,16 @@ namespace Training_Center.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Number_321 {
+            get {
+                object obj = ResourceManager.GetObject("Number 321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap online_banking_black_icon_bundle_for_secure_digital_finance_payment_and_account_management_vector {
             get {
                 object obj = ResourceManager.GetObject("online-banking-black-icon-bundle-for-secure-digital-finance-payment-and-account-m" +
