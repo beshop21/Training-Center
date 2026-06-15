@@ -66,7 +66,7 @@ namespace Training_Center
                 MessageBox.Show("This Enrollment isn't Exist ");
                 return;
             }
-
+            button1.Enabled = false;
             uscStudentFilter1.Enabled = false;
             uscCourseDetailsWithFilter1.Enabled = false;
             tgEdit.Enabled = true;
@@ -77,7 +77,9 @@ namespace Training_Center
             txtGrade.Text = Enroollment.Grade.ToString();
             dpEnrollmetDate.Value = Enroollment.EnrollmentDate;
             txtFee.Text = Enroollment.TotalFee.ToString();
+           
             lbEnrollmentID.Text = Enroollment.ErollmentiD.ToString();
+            lbStudentID.Text = Enroollment.StudentID.ToString();
             lbCourseName.Text = ClsCourses.Find(Enroollment.CourseID).Title;
 
 
@@ -123,8 +125,8 @@ namespace Training_Center
             }
 
             Enroollment.Status = cbStatus.SelectedItem.ToString();
-            Enroollment.StudentID = uscStudentFilter1.StudentID;
-            Enroollment.CourseID = uscCourseDetailsWithFilter1.CourseID;
+            Enroollment.StudentID = Convert.ToInt16( lbStudentID.Text);
+            Enroollment.CourseID = ClsCourses.Find(lbCourseName.Text).CourseID;
             Enroollment.Grade = float.Parse(txtGrade.Text);
             Enroollment.EnrollmentDate = dpEnrollmetDate.Value;
             Enroollment.TotalFee = float.Parse(txtFee.Text);

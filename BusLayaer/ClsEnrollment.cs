@@ -93,6 +93,9 @@ namespace BusLayaer
                     }
                     else
                         return false;
+
+                case Enmode.update:
+                    return _updateEnrollment();
             }
             return false;
         }

@@ -66,5 +66,12 @@ namespace Training_Center
 
 
         }
+
+        private void tlsUpdate_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmErollmentAddUpdate((int)dgEnrollment.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _GetallEnrollment();
+        }
     }
 }

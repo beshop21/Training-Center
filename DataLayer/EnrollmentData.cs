@@ -166,8 +166,13 @@ namespace DataLayer
 
                     StudentID = (int)reader["StudentsID"];
                     Status = (string)reader["Statuss"];
-                    CourseID = (int)reader["Courses"];
-                    Grade = Convert.ToSingle(reader["Grade"]);
+                    CourseID = (int)reader["CoursesID"];
+                    if (reader["Grade"] != DBNull.Value)
+                    {
+                        Grade = Convert.ToSingle(reader["Grade"]);
+                    }
+                    else
+                        Grade = 0;
                     EnrollmentDate = (DateTime)reader["EnrollmentDate"];
                     TotalFee = Convert.ToSingle(reader["TotalFee"]);
                 }
