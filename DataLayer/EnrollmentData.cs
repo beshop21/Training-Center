@@ -286,6 +286,7 @@ namespace DataLayer
 
             string query = "Delete from  Enrollments where EnrollmentID=@EnrollmentID ";
             SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@EnrollmentID", ID);
 
             try {
 

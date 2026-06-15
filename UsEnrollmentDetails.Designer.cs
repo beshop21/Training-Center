@@ -96,9 +96,9 @@
             this.label2.Location = new System.Drawing.Point(329, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(134, 20);
             this.label2.TabIndex = 234;
-            this.label2.Text = "Student ID :";
+            this.label2.Text = "Student Name :";
             // 
             // label22
             // 
@@ -191,7 +191,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Training_Center.Properties.Resources.Number_32;
-            this.pictureBox3.Location = new System.Drawing.Point(434, 17);
+            this.pictureBox3.Location = new System.Drawing.Point(461, 17);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,7 +252,7 @@
             // 
             this.lbstudentID.AutoSize = true;
             this.lbstudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbstudentID.Location = new System.Drawing.Point(484, 17);
+            this.lbstudentID.Location = new System.Drawing.Point(499, 17);
             this.lbstudentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbstudentID.Name = "lbstudentID";
             this.lbstudentID.Size = new System.Drawing.Size(53, 20);

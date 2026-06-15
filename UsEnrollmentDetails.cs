@@ -34,7 +34,7 @@ namespace Training_Center
 
             }
 
-            lbEnrollmentID.Text = Enrollmen.ErollmentiD.ToString();
+            lbEnrollmentdate.Text = Enrollmen.EnrollmentDate.ToString();
             lbStatus.Text = Enrollmen.Status;
             lbGrade.Text = Enrollmen.Grade.ToString();
             lbFee.Text = Enrollmen.TotalFee.ToString();

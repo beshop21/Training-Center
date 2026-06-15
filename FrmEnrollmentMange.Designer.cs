@@ -95,6 +95,7 @@
             this.tlEnrollmentInfo.Name = "tlEnrollmentInfo";
             this.tlEnrollmentInfo.Size = new System.Drawing.Size(225, 46);
             this.tlEnrollmentInfo.Text = "Enrollment Info";
+            this.tlEnrollmentInfo.Click += new System.EventHandler(this.tlEnrollmentInfo_Click);
             // 
             // toolStripSeparator1
             // 

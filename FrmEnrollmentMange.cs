@@ -77,11 +77,28 @@ namespace Training_Center
         private void tlsDelete_Click(object sender, EventArgs e)
         {
 
+            if (MessageBox.Show("Are you sure you want to delete Person [" + dgEnrollment.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (ClsEnrollment.Delete((int)dgEnrollment.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("This Enrollment is Delete Successfully ");
+                    return;
+                }
+                else
+                    MessageBox.Show("There is Problem");
+            }
+            _GetallEnrollment();
         }
 
         private void tlStripAdd_Click(object sender, EventArgs e)
         {
             Form frm = new FrmErollmentAddUpdate();
+            frm.ShowDialog();
+        }
+
+        private void tlEnrollmentInfo_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmEnrollmentDetails((int)dgEnrollment.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
     }
