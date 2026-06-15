@@ -28,5 +28,11 @@ namespace Training_Center
             Form frm = new frmLIstOfcourses();
             frm.ShowDialog();
         }
+
+        private void EnrollmentstoolStrip_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmEnrollmentMange();
+            frm.ShowDialog();
+        }
     }
 }

@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgEnrollment = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,28 +57,29 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // dataGridView1
+            // dgEnrollment
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 216);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1031, 336);
-            this.dataGridView1.TabIndex = 2;
+            this.dgEnrollment.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgEnrollment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgEnrollment.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgEnrollment.Location = new System.Drawing.Point(2, 216);
+            this.dgEnrollment.Name = "dgEnrollment";
+            this.dgEnrollment.Size = new System.Drawing.Size(1031, 336);
+            this.dgEnrollment.TabIndex = 2;
             // 
             // FrmEnrollmentMange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 564);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgEnrollment);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmEnrollmentMange";
             this.Text = "FrmEnrollmentMange";
+            this.Load += new System.EventHandler(this.FrmEnrollmentMange_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,6 +89,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgEnrollment;
     }
 }

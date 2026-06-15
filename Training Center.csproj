@@ -79,18 +79,6 @@
     <Compile Include="FrmErollmentAddUpdate.Designer.cs">
       <DependentUpon>FrmErollmentAddUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFindCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmFindCourse.Designer.cs">
-      <DependentUpon>frmFindCourse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmFindStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmFindStudent.Designer.cs">
-      <DependentUpon>frmFindStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,12 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmErollmentAddUpdate.resx">
       <DependentUpon>FrmErollmentAddUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmFindCourse.resx">
-      <DependentUpon>frmFindCourse.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmFindStudent.resx">
-      <DependentUpon>frmFindStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddAndUpdateStudents.resx">
       <DependentUpon>AddAndUpdateStudents.cs</DependentUpon>

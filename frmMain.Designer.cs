@@ -81,6 +81,7 @@
             this.EnrollmentstoolStrip.Name = "EnrollmentstoolStrip";
             this.EnrollmentstoolStrip.Size = new System.Drawing.Size(291, 68);
             this.EnrollmentstoolStrip.Text = "Enrollments (Registration) ";
+            this.EnrollmentstoolStrip.Click += new System.EventHandler(this.EnrollmentstoolStrip_Click);
             // 
             // UserstoolStrip
             // 

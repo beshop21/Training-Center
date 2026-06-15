@@ -22,8 +22,6 @@ C:\Users\abdi\Pictures\Training Center\obj\Debug\Training.25908653.Up2Date
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.exe
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training Center.pdb
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UscCourseDetailsWithFilter.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmFindCourse.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UscStudentFilter.resources
-C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.frmFindStudent.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmErollmentAddUpdate.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmEnrollmentMange.resources

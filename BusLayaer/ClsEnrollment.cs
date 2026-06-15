@@ -103,7 +103,7 @@ namespace BusLayaer
             return EnrollmentData.DeleteEnrollment(id);
         }
 
-        public DataTable GetAll()
+        public static DataTable GetAll()
         {
             return EnrollmentData.GetAllRecode();
         }
