@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ClsCourses.cs" />
     <Compile Include="ClsEnrollment.cs" />
+    <Compile Include="ClsPayments.cs" />
     <Compile Include="ClsStudents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

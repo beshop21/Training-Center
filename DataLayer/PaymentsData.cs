@@ -13,21 +13,21 @@ namespace DataLayer
 
         public static int InsertNewPayment(string StudentName, string CourseName, DateTime PaymanetData, float AmountOFpaid, string PaymentMethod)
         {
-            int CourseId = -1;
+            int PaymentID = -1;
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string query = @"insert into Courses (Title,Hourse,Price,StartDate,IsActive) 
-                     VALUES (@Title,@Hourse,@Price,@StartDate,@IsActive);
+            string query = @"(insert into Payments(StudentName,CourseName,PayMentDate,AmountPaid,PaymentMethod)
+                                               values(@StudentName,@CourseName,@PayMentDate,@AmountPaid,@PaymentMethod));
                      SELECT SCOPE_IDENTITY();";
 
             SqlCommand comnd = new SqlCommand(query, connection);
 
-            comnd.Parameters.AddWithValue("@Title", StudentName);
-            comnd.Parameters.AddWithValue("@Hourse", CourseName);
-            comnd.Parameters.AddWithValue("@Price", PaymanetData);
-            comnd.Parameters.AddWithValue("@StartDate", AmountOFpaid);
-            comnd.Parameters.AddWithValue("@IsActive", PaymentMethod);
+            comnd.Parameters.AddWithValue("@StudentName", StudentName);
+            comnd.Parameters.AddWithValue("@CourseName", CourseName);
+            comnd.Parameters.AddWithValue("@@PayMentDate", PaymanetData);
+            comnd.Parameters.AddWithValue("@AmountPaid", AmountOFpaid);
+            comnd.Parameters.AddWithValue("@@PaymentMethod", PaymentMethod);
 
             try
             {
@@ -37,7 +37,7 @@ namespace DataLayer
 
                 if (result != null && int.TryParse(result.ToString(), out int ID))
                 {
-                    CourseId = ID;
+                    PaymentID = ID;
                 }
             }
             catch (Exception ex)
@@ -49,31 +49,32 @@ namespace DataLayer
                 connection.Close();
             }
 
-            return CourseId;
+            return PaymentID;
         }
 
-        public static bool UpdateCourse(int id, string title, int hours, float price, DateTime startdate, bool isactive)
+        public static bool UpdateCourse(int PaymentID, string studentID, string CourseName, DateTime PaymentDate, float AmountPaid,string PaymentMethod)
         {
             int Effectnumber = -1;
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
             string qeury = @"update Courses set 
-                          Title=@Title,
-                          Hourse=@Hourse,
-                          Price=@Price,
-                          StartDate=@StartDate,
-                          IsActive=@IsActive where CourseID=@CourseID";
+                         StudentName=@StudentName,
+                         CourseName=@CourseName,
+                          PayMentDate=@PayMentDate,
+                          AmountPaid=@AmountPaid,
+                       PaymentMethod=@PaymentMethod where paymentID=@paymentID";
+                                               
 
             SqlCommand comnd = new SqlCommand(qeury, connection);
 
-            comnd.Parameters.AddWithValue("@CourseID", id);
-            comnd.Parameters.AddWithValue("@Title", title);
-            comnd.Parameters.AddWithValue("@Hourse", hours);
-            comnd.Parameters.AddWithValue("@Price", price);
-            comnd.Parameters.AddWithValue("@StartDate", startdate);
+            comnd.Parameters.AddWithValue("@paymentID", PaymentID);
+            comnd.Parameters.AddWithValue("@StudentName", studentID);
+            comnd.Parameters.AddWithValue("@CourseName", CourseName);
+            comnd.Parameters.AddWithValue("@PayMentDate", PaymentDate);
+            comnd.Parameters.AddWithValue("@AmountPaid", AmountPaid);
 
-            comnd.Parameters.AddWithValue("@IsActive", isactive);
+            comnd.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
 
             try
             {
