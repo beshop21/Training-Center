@@ -52,7 +52,7 @@ namespace DataLayer
             return PaymentID;
         }
 
-        public static bool UpdateCourse(int PaymentID, string studentID, string CourseName, DateTime PaymentDate, float AmountPaid,string PaymentMethod)
+        public static bool UpdatePayments(int PaymentID, string studentID, string CourseName, DateTime PaymentDate, float AmountPaid,string PaymentMethod)
         {
             int Effectnumber = -1;
 

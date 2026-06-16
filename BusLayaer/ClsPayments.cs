@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +46,51 @@ namespace BusLayaer
             this.PaymentMethod = paymentmethod;
             mode = Enmode.update;
         }
+
+
+        private bool _Add()
+        {
+            this.PaymentID = PaymentsData.InsertNewPayment(this.StudentName, this.CourseName, this.PaymentDate, this.AmountPaid, this.PaymentMethod);
+            return (this.PaymentID != -1);
+
+        }
+
+
+        private bool _Update()
+        {
+            return PaymentsData.UpdatePayments(this.PaymentID, this.StudentName, this.CourseName, this.PaymentDate, this.AmountPaid, this.PaymentMethod);
+
+        }
+
+
+
+
+
+
+
+
+
+        public bool Save()
+        {
+            switch (mode)
+            {
+                case Enmode.addnew:
+                    if (_Add())
+                    {
+                        mode = Enmode.update;
+                        return true;
+                        break;
+                    }
+                    else
+                        return false;
+
+                case Enmode.update:
+                    return _Update();
+            }
+            return false;
+        }
+
+
 
     }
 }
