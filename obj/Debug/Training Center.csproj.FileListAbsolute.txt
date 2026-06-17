@@ -27,3 +27,4 @@ C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmErollmentAdd
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmEnrollmentMange.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.UsEnrollmentDetails.resources
 C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmEnrollmentDetails.resources
+C:\Users\abdi\Pictures\Training Center\obj\Debug\Training_Center.FrmPaymentAddUpdate.resources

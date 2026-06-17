@@ -67,23 +67,29 @@
     <Compile Include="Courses\FrmCourseDetails.Designer.cs">
       <DependentUpon>FrmCourseDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEnrollmentDetails.cs">
+    <Compile Include="Enrollment\FrmEnrollmentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEnrollmentDetails.Designer.cs">
+    <Compile Include="Enrollment\FrmEnrollmentDetails.Designer.cs">
       <DependentUpon>FrmEnrollmentDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEnrollmentMange.cs">
+    <Compile Include="Enrollment\FrmEnrollmentMange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEnrollmentMange.Designer.cs">
+    <Compile Include="Enrollment\FrmEnrollmentMange.Designer.cs">
       <DependentUpon>FrmEnrollmentMange.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmErollmentAddUpdate.cs">
+    <Compile Include="Enrollment\FrmErollmentAddUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmErollmentAddUpdate.Designer.cs">
+    <Compile Include="Enrollment\FrmErollmentAddUpdate.Designer.cs">
       <DependentUpon>FrmErollmentAddUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaymentAddUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaymentAddUpdate.Designer.cs">
+      <DependentUpon>FrmPaymentAddUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
@@ -135,10 +141,10 @@
     <Compile Include="Students\Controles\UscStudentFilter.Designer.cs">
       <DependentUpon>UscStudentFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsEnrollmentDetails.cs">
+    <Compile Include="Enrollment\Control\UsEnrollmentDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UsEnrollmentDetails.Designer.cs">
+    <Compile Include="Enrollment\Control\UsEnrollmentDetails.Designer.cs">
       <DependentUpon>UsEnrollmentDetails.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Courses\FrmAddUpdateCoures.resx">
@@ -150,14 +156,17 @@
     <EmbeddedResource Include="Courses\FrmCourseDetails.resx">
       <DependentUpon>FrmCourseDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEnrollmentDetails.resx">
+    <EmbeddedResource Include="Enrollment\FrmEnrollmentDetails.resx">
       <DependentUpon>FrmEnrollmentDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEnrollmentMange.resx">
+    <EmbeddedResource Include="Enrollment\FrmEnrollmentMange.resx">
       <DependentUpon>FrmEnrollmentMange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmErollmentAddUpdate.resx">
+    <EmbeddedResource Include="Enrollment\FrmErollmentAddUpdate.resx">
       <DependentUpon>FrmErollmentAddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaymentAddUpdate.resx">
+      <DependentUpon>FrmPaymentAddUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddAndUpdateStudents.resx">
       <DependentUpon>AddAndUpdateStudents.cs</DependentUpon>
@@ -193,7 +202,7 @@
     <EmbeddedResource Include="Students\Controles\UscStudentFilter.resx">
       <DependentUpon>UscStudentFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsEnrollmentDetails.resx">
+    <EmbeddedResource Include="Enrollment\Control\UsEnrollmentDetails.resx">
       <DependentUpon>UsEnrollmentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
