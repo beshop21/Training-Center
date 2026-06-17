@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgEnrollment = new System.Windows.Forms.DataGridView();
-            this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbPayments = new System.Windows.Forms.TabControl();
+            this.tpSearch = new System.Windows.Forms.TabPage();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.tgAdd = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.lbPaymentID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,104 +47,80 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPersonInfoNext = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.dgEnrollment = new System.Windows.Forms.DataGridView();
+            this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
+            this.tbPayments.SuspendLayout();
+            this.tpSearch.SuspendLayout();
+            this.tgAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tbPayments
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(23, 49);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1127, 607);
-            this.tabControl1.TabIndex = 0;
+            this.tbPayments.Controls.Add(this.tpSearch);
+            this.tbPayments.Controls.Add(this.tgAdd);
+            this.tbPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPayments.Location = new System.Drawing.Point(23, 49);
+            this.tbPayments.Name = "tbPayments";
+            this.tbPayments.SelectedIndex = 0;
+            this.tbPayments.Size = new System.Drawing.Size(1127, 564);
+            this.tbPayments.TabIndex = 0;
             // 
-            // tabPage1
+            // tpSearch
             // 
-            this.tabPage1.Controls.Add(this.btnPersonInfoNext);
-            this.tabPage1.Controls.Add(this.dgEnrollment);
-            this.tabPage1.Controls.Add(this.uscStudentFilter1);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1119, 576);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Search";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpSearch.Controls.Add(this.btnNext);
+            this.tpSearch.Controls.Add(this.uscStudentFilter1);
+            this.tpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpSearch.Location = new System.Drawing.Point(4, 27);
+            this.tpSearch.Name = "tpSearch";
+            this.tpSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSearch.Size = new System.Drawing.Size(1119, 533);
+            this.tpSearch.TabIndex = 0;
+            this.tpSearch.Text = "Search";
+            this.tpSearch.UseVisualStyleBackColor = true;
+            this.tpSearch.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // dgEnrollment
+            // btnNext
             // 
-            this.dgEnrollment.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgEnrollment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgEnrollment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgEnrollment.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgEnrollment.Location = new System.Drawing.Point(23, 379);
-            this.dgEnrollment.Name = "dgEnrollment";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgEnrollment.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgEnrollment.Size = new System.Drawing.Size(775, 162);
-            this.dgEnrollment.TabIndex = 1;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Image = global::Training_Center.Properties.Resources.Next_64;
+            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNext.Location = new System.Drawing.Point(955, 453);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(126, 43);
+            this.btnNext.TabIndex = 120;
+            this.btnNext.Text = "Next         ";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // uscStudentFilter1
+            // tgAdd
             // 
-            this.uscStudentFilter1.Location = new System.Drawing.Point(23, 20);
-            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4);
-            this.uscStudentFilter1.Name = "uscStudentFilter1";
-            this.uscStudentFilter1.Size = new System.Drawing.Size(563, 318);
-            this.uscStudentFilter1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.lbPaymentID);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.lbCourseName);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.lbStudentID);
-            this.tabPage2.Controls.Add(this.txtPaid);
-            this.tabPage2.Controls.Add(this.dpEnrollmetDate);
-            this.tabPage2.Controls.Add(this.cbPaymentMethod);
-            this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.pictureBox4);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.pictureBox5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1119, 576);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "add";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tgAdd.Controls.Add(this.dgEnrollment);
+            this.tgAdd.Controls.Add(this.label3);
+            this.tgAdd.Controls.Add(this.lbPaymentID);
+            this.tgAdd.Controls.Add(this.label4);
+            this.tgAdd.Controls.Add(this.lbCourseName);
+            this.tgAdd.Controls.Add(this.label2);
+            this.tgAdd.Controls.Add(this.lbStudentID);
+            this.tgAdd.Controls.Add(this.txtPaid);
+            this.tgAdd.Controls.Add(this.dpEnrollmetDate);
+            this.tgAdd.Controls.Add(this.cbPaymentMethod);
+            this.tgAdd.Controls.Add(this.label22);
+            this.tgAdd.Controls.Add(this.label5);
+            this.tgAdd.Controls.Add(this.pictureBox4);
+            this.tgAdd.Controls.Add(this.label6);
+            this.tgAdd.Controls.Add(this.pictureBox5);
+            this.tgAdd.Location = new System.Drawing.Point(4, 27);
+            this.tgAdd.Name = "tgAdd";
+            this.tgAdd.Padding = new System.Windows.Forms.Padding(3);
+            this.tgAdd.Size = new System.Drawing.Size(1119, 533);
+            this.tgAdd.TabIndex = 1;
+            this.tgAdd.Text = "add";
+            this.tgAdd.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -307,19 +279,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Payment ";
             // 
-            // btnPersonInfoNext
+            // dgEnrollment
             // 
-            this.btnPersonInfoNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPersonInfoNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonInfoNext.Image = global::Training_Center.Properties.Resources.Next_64;
-            this.btnPersonInfoNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPersonInfoNext.Location = new System.Drawing.Point(963, 514);
-            this.btnPersonInfoNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnPersonInfoNext.Name = "btnPersonInfoNext";
-            this.btnPersonInfoNext.Size = new System.Drawing.Size(126, 43);
-            this.btnPersonInfoNext.TabIndex = 120;
-            this.btnPersonInfoNext.Text = "Next         ";
-            this.btnPersonInfoNext.UseVisualStyleBackColor = true;
+            this.dgEnrollment.BackgroundColor = System.Drawing.Color.White;
+            this.dgEnrollment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgEnrollment.Location = new System.Drawing.Point(6, 283);
+            this.dgEnrollment.Name = "dgEnrollment";
+            this.dgEnrollment.Size = new System.Drawing.Size(775, 162);
+            this.dgEnrollment.TabIndex = 238;
+            this.dgEnrollment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // uscStudentFilter1
+            // 
+            this.uscStudentFilter1.Location = new System.Drawing.Point(64, 46);
+            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uscStudentFilter1.Name = "uscStudentFilter1";
+            this.uscStudentFilter1.Size = new System.Drawing.Size(692, 318);
+            this.uscStudentFilter1.TabIndex = 0;
             // 
             // FrmPaymentAddUpdate
             // 
@@ -327,17 +303,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 742);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tbPayments);
             this.Name = "FrmPaymentAddUpdate";
             this.Text = "FrmPaymentAddUpdate";
             this.Load += new System.EventHandler(this.FrmPaymentAddUpdate_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tbPayments.ResumeLayout(false);
+            this.tpSearch.ResumeLayout(false);
+            this.tgAdd.ResumeLayout(false);
+            this.tgAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,12 +321,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tbPayments;
+        private System.Windows.Forms.TabPage tpSearch;
+        private System.Windows.Forms.TabPage tgAdd;
         private System.Windows.Forms.Label label1;
         private UscStudentFilter uscStudentFilter1;
-        private System.Windows.Forms.DataGridView dgEnrollment;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbCourseName;
         private System.Windows.Forms.Label label2;
@@ -365,6 +340,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbPaymentID;
-        private System.Windows.Forms.Button btnPersonInfoNext;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.DataGridView dgEnrollment;
     }
 }

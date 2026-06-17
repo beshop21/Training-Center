@@ -60,18 +60,7 @@ namespace BusLayaer
                 return null;
         }
 
-        public static ClsEnrollment FindByStudentID(int id)
-        {
-            string status = "";
-            int EnrollmentID = -1, courseid = -1;
-            float grade = -1;
-            DateTime enrollmentdate = DateTime.Now; float totlafee = -1;
-
-            if (EnrollmentData.GetEnrollmentByStudentID(ref EnrollmentID, ref status, id, ref courseid, ref grade, ref enrollmentdate, ref totlafee))
-                return new ClsEnrollment(EnrollmentID, status, id, courseid, grade, enrollmentdate, totlafee);
-            else
-                return null;
-        }
+      
         public bool IsStudentHasEnrollmentOnthisCourse(int StID,int COuID)
         {
             return EnrollmentData.IsStudentHaveErollmentOnthisCourse(StID, COuID);
@@ -120,6 +109,12 @@ namespace BusLayaer
         public static DataTable GetAll()
         {
             return EnrollmentData.GetAllRecode();
+        }
+
+
+        public static DataTable FindStudentInfo(int id)
+        {
+            return EnrollmentData.GetEnrollmentByStudentID(id);
         }
 
     }

@@ -47,9 +47,9 @@ namespace DataLayer
             return isFound;
         }
 
-        public static bool GetEnrollmentByStudentID(ref int EnrollmentID, ref string Status,int StudentID, ref int CourseID,ref float Grade,ref DateTime EnrollmentDate,
-    ref float TotalFee)
+        public static DataTable GetEnrollmentByStudentID(int id)
         {
+            DataTable tb = new DataTable();
             bool isFound = false;
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
@@ -58,7 +58,7 @@ namespace DataLayer
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@StudentsID", StudentID);
+            command.Parameters.AddWithValue("@StudentsID", id);
 
             try
             {
@@ -66,16 +66,11 @@ namespace DataLayer
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read())
+                if (reader.HasRows)
                 {
-                    isFound = true;
+                    tb.Load(reader);
+                   
 
-                    EnrollmentID = (int)reader["EnrollmentID"];
-                    Status = (string)reader["Statuss"];
-                    CourseID = (int)reader["Courses"];
-                    Grade = Convert.ToSingle(reader["Grade"]);
-                    EnrollmentDate = (DateTime)reader["EnrollmentDate"];
-                    TotalFee = Convert.ToSingle(reader["TotalFee"]);
                 }
 
                 reader.Close();
@@ -89,7 +84,7 @@ namespace DataLayer
                 connection.Close();
             }
 
-            return isFound;
+            return tb;
         }
 
 

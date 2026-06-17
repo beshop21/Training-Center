@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,9 +20,9 @@ namespace Training_Center
 
         private int _PaymentID = -1;
         ClsEnrollment Enrollmentinfo;
-        
-        
 
+
+        
 
 
         public FrmPaymentAddUpdate()
@@ -54,12 +55,34 @@ namespace Training_Center
         }
 
 
-
+        
 
 
         private void FrmPaymentAddUpdate_Load(object sender, EventArgs e)
         {
             _RestDefualt();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (uscStudentFilter1.StudentID == -1)
+            {
+                MessageBox.Show("Please Select Student ");
+                return;
+            }
+           dgEnrollment.DataSource = ClsEnrollment.FindStudentInfo(uscStudentFilter1.StudentID);
+            tbPayments.SelectedTab= tbPayments.TabPages["tgAdd"];
+             
         }
     }
 }
