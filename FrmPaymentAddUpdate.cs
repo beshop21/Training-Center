@@ -13,6 +13,11 @@ namespace Training_Center
 {
     public partial class FrmPaymentAddUpdate : Form
     {
+
+        enum EnMode { addnew=0,update=1}
+        EnMode Mode = EnMode.addnew;
+
+        private int _PaymentID = -1;
         ClsEnrollment Enrollmentinfo;
         
         
@@ -22,7 +27,34 @@ namespace Training_Center
         public FrmPaymentAddUpdate()
         {
             InitializeComponent();
+            Mode = EnMode.addnew;
+
         }
+        public FrmPaymentAddUpdate(int id)
+        {
+            InitializeComponent();
+            _PaymentID = id;
+            Mode = EnMode.addnew;
+
+        }
+
+
+        private void _RestDefualt()
+        {
+            if (Mode == EnMode.addnew)
+            {
+                label1.Text = "Add New Payment";
+            }
+            else
+                label1.Text = "Update Payment";
+
+
+
+        }
+
+
+
+
 
         private void FrmPaymentAddUpdate_Load(object sender, EventArgs e)
         {
