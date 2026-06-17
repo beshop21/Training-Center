@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusLayaer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace Training_Center
 {
     public partial class FrmPaymentAddUpdate : Form
     {
+        ClsEnrollment Enrollmentinfo;
+        
+        
+
+
+
         public FrmPaymentAddUpdate()
         {
             InitializeComponent();
+        }
+
+        private void FrmPaymentAddUpdate_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -47,10 +47,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(51, 76);
+            this.tabControl1.Location = new System.Drawing.Point(23, 49);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(828, 581);
+            this.tabControl1.Size = new System.Drawing.Size(1127, 607);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -61,39 +61,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(820, 550);
+            this.tabPage1.Size = new System.Drawing.Size(1119, 576);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Search";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(349, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add Payment ";
-            // 
-            // uscStudentFilter1
-            // 
-            this.uscStudentFilter1.Location = new System.Drawing.Point(23, 20);
-            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.uscStudentFilter1.Name = "uscStudentFilter1";
-            this.uscStudentFilter1.Size = new System.Drawing.Size(563, 318);
-            this.uscStudentFilter1.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -125,18 +96,48 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(681, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 162);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1119, 576);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(349, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Add Payment ";
+            // 
+            // uscStudentFilter1
+            // 
+            this.uscStudentFilter1.Location = new System.Drawing.Point(23, 20);
+            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uscStudentFilter1.Name = "uscStudentFilter1";
+            this.uscStudentFilter1.Size = new System.Drawing.Size(563, 318);
+            this.uscStudentFilter1.TabIndex = 0;
             // 
             // FrmPaymentAddUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 717);
+            this.ClientSize = new System.Drawing.Size(1247, 742);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmPaymentAddUpdate";
             this.Text = "FrmPaymentAddUpdate";
+            this.Load += new System.EventHandler(this.FrmPaymentAddUpdate_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

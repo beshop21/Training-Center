@@ -47,7 +47,7 @@ namespace DataLayer
             return isFound;
         }
 
-        public static bool GetEnrollmentByStudentID(ref int EnrollmentID, string Status,int StudentID, ref int CourseID,ref float Grade,ref DateTime EnrollmentDate,
+        public static bool GetEnrollmentByStudentID(ref int EnrollmentID, ref string Status,int StudentID, ref int CourseID,ref float Grade,ref DateTime EnrollmentDate,
     ref float TotalFee)
         {
             bool isFound = false;
