@@ -48,6 +48,7 @@ namespace Training_Center
             else
                 label1.Text = "Update Payment";
 
+            cbPaymentMethod.SelectedIndex = 0;
 
 
         }
@@ -58,7 +59,7 @@ namespace Training_Center
 
         private void FrmPaymentAddUpdate_Load(object sender, EventArgs e)
         {
-
+            _RestDefualt();
         }
     }
 }
