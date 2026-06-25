@@ -37,7 +37,8 @@ namespace Training_Center
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            Form frm = new FrmPaymentAddUpdate((int)dgPayments.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }

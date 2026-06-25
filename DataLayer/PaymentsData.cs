@@ -58,7 +58,7 @@ namespace DataLayer
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string qeury = @"update Courses set 
+            string qeury = @"update Payments set 
                          StudentName=@StudentName,
                          CourseName=@CourseName,
                           PayMentDate=@PayMentDate,
@@ -68,7 +68,7 @@ namespace DataLayer
 
             SqlCommand comnd = new SqlCommand(qeury, connection);
 
-            comnd.Parameters.AddWithValue("@paymentID", PaymentID);
+            comnd.Parameters.AddWithValue("paymentID", PaymentID);
             comnd.Parameters.AddWithValue("@StudentName", studentID);
             comnd.Parameters.AddWithValue("@CourseName", CourseName);
             comnd.Parameters.AddWithValue("@PayMentDate", PaymentDate);
@@ -132,7 +132,7 @@ namespace DataLayer
 
             SqlCommand commd = new SqlCommand(qeury, connection);
 
-            commd.Parameters.AddWithValue("@CourseID", id);
+            commd.Parameters.AddWithValue("@paymentID", id);
 
             try
             {
@@ -146,7 +146,7 @@ namespace DataLayer
                     StudentName = (string)reader["StudentName"];
                     CourseName = (string)reader["CourseName"];
                     PaymentDate = (DateTime)reader["PayMentDate"];
-                    AmountofPay = (float)reader["AmountPaid"];
+                    AmountofPay = Convert.ToSingle(reader["AmountPaid"]);
                     PaymentMethod = (string)reader["PaymentMethod"];
                 }
 

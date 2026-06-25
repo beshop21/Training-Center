@@ -45,6 +45,7 @@
             // 
             this.dgPayments.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPayments.ContextMenuStrip = this.CtmStudents;
             this.dgPayments.Location = new System.Drawing.Point(34, 136);
             this.dgPayments.Name = "dgPayments";
             this.dgPayments.Size = new System.Drawing.Size(811, 302);
@@ -71,7 +72,7 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.CtmStudents.Name = "contextMenuStrip1";
-            this.CtmStudents.Size = new System.Drawing.Size(205, 216);
+            this.CtmStudents.Size = new System.Drawing.Size(187, 194);
             this.CtmStudents.Text = "Payment Info";
             // 
             // toolStripMenuItem1
@@ -94,7 +95,7 @@
             this.toolStripMenuItem2.Image = global::Training_Center.Properties.Resources.edit_32;
             this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(204, 46);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(186, 46);
             this.toolStripMenuItem2.Text = "Update ";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 

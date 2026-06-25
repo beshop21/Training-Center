@@ -38,7 +38,7 @@ namespace Training_Center
         {
             InitializeComponent();
             _PaymentID = id;
-            Mode = EnMode.addnew;
+            Mode = EnMode.update;
 
         }
 
@@ -59,7 +59,25 @@ namespace Training_Center
 
         private void _LoadData()
         {
-         
+
+            Payment = ClsPayments.Find(_PaymentID);
+            if (Payment == null)
+            {
+                MessageBox.Show("This Payment Does Not Exist");
+                return;
+            }
+            uscStudentFilter1.Enabled = false;
+
+            tbPayments.SelectedTab = tbPayments.TabPages["tgAdd"];
+            lbPaymentID.Text = Payment.PaymentID.ToString();
+            lbStudentName.Text = Payment.StudentName;
+            lbCourseName.Text = Payment.CourseName;
+            cbPaymentMethod.SelectedItem = Payment.PaymentMethod;
+            dpEnrollmetDate.Value = Payment.PaymentDate;
+            txtPaid.Text = Payment.AmountPaid.ToString();
+
+           
+
         }
         
 
@@ -67,6 +85,10 @@ namespace Training_Center
         private void FrmPaymentAddUpdate_Load(object sender, EventArgs e)
         {
             _RestDefualt();
+            if (Mode == EnMode.update)
+            {
+                _LoadData();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
