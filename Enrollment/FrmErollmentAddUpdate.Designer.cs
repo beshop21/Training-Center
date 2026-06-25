@@ -85,6 +85,7 @@
             this.tgSearch.TabIndex = 0;
             this.tgSearch.Text = "Search";
             this.tgSearch.UseVisualStyleBackColor = true;
+            this.tgSearch.Click += new System.EventHandler(this.tgSearch_Click);
             // 
             // button1
             // 

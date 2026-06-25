@@ -20,8 +20,11 @@ namespace Training_Center
 
         private int _PaymentID = -1;
         ClsEnrollment Enrollmentinfo;
+        ClsStudents student;
+        ClsPayments Payment = new ClsPayments();
+        private int _courseID = -1;
 
-
+        DataTable tb = ClsEnrollment.GetAll();
         
 
 
@@ -54,7 +57,10 @@ namespace Training_Center
 
         }
 
+        private void _LoadData()
+        {
 
+        }
         
 
 
@@ -82,7 +88,31 @@ namespace Training_Center
             }
            dgEnrollment.DataSource = ClsEnrollment.FindStudentInfo(uscStudentFilter1.StudentID);
             tbPayments.SelectedTab= tbPayments.TabPages["tgAdd"];
-             
+            student = ClsStudents.Find(uscStudentFilter1.StudentID);
+            lbStudentName.Text = student.Fullname;
+            foreach(DataRow row in tb.Rows)
+            {
+                 _courseID = Convert.ToInt32(row["CoursesID"]);
+            }
+            lbCourseName.Text = ClsCourses.Find(_courseID).Title;
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            Payment.StudentName = lbStudentName.Text;
+            Payment.CourseName = lbCourseName.Text;
+            Payment.PaymentDate = dpEnrollmetDate.Value;
+            Payment.AmountPaid = float.Parse(txtPaid.Text);
+            Payment.PaymentMethod = cbPaymentMethod.SelectedItem.ToString();
+            if (Payment.Save())
+            {
+                MessageBox.Show("This Payment is Save ");
+                lbPaymentID.Text = Payment.PaymentID.ToString();
+                return;
+            }
+
+            else
+                MessageBox.Show("There is Error Please check");
         }
     }
 }

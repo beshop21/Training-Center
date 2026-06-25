@@ -31,13 +31,15 @@
             this.tbPayments = new System.Windows.Forms.TabControl();
             this.tpSearch = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
+            this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
             this.tgAdd = new System.Windows.Forms.TabPage();
+            this.dgEnrollment = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.lbPaymentID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbCourseName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbStudentID = new System.Windows.Forms.Label();
+            this.lbStudentName = new System.Windows.Forms.Label();
             this.txtPaid = new System.Windows.Forms.TextBox();
             this.dpEnrollmetDate = new System.Windows.Forms.DateTimePicker();
             this.cbPaymentMethod = new System.Windows.Forms.ComboBox();
@@ -47,14 +49,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgEnrollment = new System.Windows.Forms.DataGridView();
-            this.uscStudentFilter1 = new Training_Center.UscStudentFilter();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
             this.tbPayments.SuspendLayout();
             this.tpSearch.SuspendLayout();
             this.tgAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).BeginInit();
             this.SuspendLayout();
             // 
             // tbPayments
@@ -97,6 +99,14 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // uscStudentFilter1
+            // 
+            this.uscStudentFilter1.Location = new System.Drawing.Point(64, 46);
+            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.uscStudentFilter1.Name = "uscStudentFilter1";
+            this.uscStudentFilter1.Size = new System.Drawing.Size(692, 318);
+            this.uscStudentFilter1.TabIndex = 0;
+            // 
             // tgAdd
             // 
             this.tgAdd.Controls.Add(this.dgEnrollment);
@@ -105,7 +115,7 @@
             this.tgAdd.Controls.Add(this.label4);
             this.tgAdd.Controls.Add(this.lbCourseName);
             this.tgAdd.Controls.Add(this.label2);
-            this.tgAdd.Controls.Add(this.lbStudentID);
+            this.tgAdd.Controls.Add(this.lbStudentName);
             this.tgAdd.Controls.Add(this.txtPaid);
             this.tgAdd.Controls.Add(this.dpEnrollmetDate);
             this.tgAdd.Controls.Add(this.cbPaymentMethod);
@@ -121,6 +131,16 @@
             this.tgAdd.TabIndex = 1;
             this.tgAdd.Text = "add";
             this.tgAdd.UseVisualStyleBackColor = true;
+            // 
+            // dgEnrollment
+            // 
+            this.dgEnrollment.BackgroundColor = System.Drawing.Color.White;
+            this.dgEnrollment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgEnrollment.Location = new System.Drawing.Point(6, 283);
+            this.dgEnrollment.Name = "dgEnrollment";
+            this.dgEnrollment.Size = new System.Drawing.Size(775, 162);
+            this.dgEnrollment.TabIndex = 238;
+            this.dgEnrollment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -177,16 +197,16 @@
             this.label2.TabIndex = 232;
             this.label2.Text = "Student Name :";
             // 
-            // lbStudentID
+            // lbStudentName
             // 
-            this.lbStudentID.AutoSize = true;
-            this.lbStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStudentID.Location = new System.Drawing.Point(646, 58);
-            this.lbStudentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbStudentID.Name = "lbStudentID";
-            this.lbStudentID.Size = new System.Drawing.Size(53, 20);
-            this.lbStudentID.TabIndex = 233;
-            this.lbStudentID.Text = "[????]";
+            this.lbStudentName.AutoSize = true;
+            this.lbStudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStudentName.Location = new System.Drawing.Point(646, 58);
+            this.lbStudentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbStudentName.Name = "lbStudentName";
+            this.lbStudentName.Size = new System.Drawing.Size(53, 20);
+            this.lbStudentName.TabIndex = 233;
+            this.lbStudentName.Text = "[????]";
             // 
             // txtPaid
             // 
@@ -279,29 +299,41 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Payment ";
             // 
-            // dgEnrollment
+            // btnClose
             // 
-            this.dgEnrollment.BackgroundColor = System.Drawing.Color.White;
-            this.dgEnrollment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEnrollment.Location = new System.Drawing.Point(6, 283);
-            this.dgEnrollment.Name = "dgEnrollment";
-            this.dgEnrollment.Size = new System.Drawing.Size(775, 162);
-            this.dgEnrollment.TabIndex = 238;
-            this.dgEnrollment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Image = global::Training_Center.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(912, 654);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(126, 37);
+            this.btnClose.TabIndex = 240;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // uscStudentFilter1
+            // btnPay
             // 
-            this.uscStudentFilter1.Location = new System.Drawing.Point(64, 46);
-            this.uscStudentFilter1.Margin = new System.Windows.Forms.Padding(4);
-            this.uscStudentFilter1.Name = "uscStudentFilter1";
-            this.uscStudentFilter1.Size = new System.Drawing.Size(692, 318);
-            this.uscStudentFilter1.TabIndex = 0;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPay.Image = global::Training_Center.Properties.Resources.Save_32;
+            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPay.Location = new System.Drawing.Point(1046, 654);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(126, 37);
+            this.btnPay.TabIndex = 239;
+            this.btnPay.Text = "Save";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // FrmPaymentAddUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 742);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnPay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPayments);
             this.Name = "FrmPaymentAddUpdate";
@@ -311,9 +343,9 @@
             this.tpSearch.ResumeLayout(false);
             this.tgAdd.ResumeLayout(false);
             this.tgAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgEnrollment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +361,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbCourseName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbStudentID;
+        private System.Windows.Forms.Label lbStudentName;
         private System.Windows.Forms.TextBox txtPaid;
         private System.Windows.Forms.DateTimePicker dpEnrollmetDate;
         private System.Windows.Forms.ComboBox cbPaymentMethod;
@@ -342,5 +374,7 @@
         private System.Windows.Forms.Label lbPaymentID;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.DataGridView dgEnrollment;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnPay;
     }
 }

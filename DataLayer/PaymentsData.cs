@@ -17,17 +17,17 @@ namespace DataLayer
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string query = @"(insert into Payments(StudentName,CourseName,PayMentDate,AmountPaid,PaymentMethod)
-                                               values(@StudentName,@CourseName,@PayMentDate,@AmountPaid,@PaymentMethod));
+            string query = @"insert into Payments(StudentName,CourseName,PayMentDate,AmountPaid,PaymentMethod)
+                                               values(@StudentName,@CourseName,@PayMentDate,@AmountPaid,@PaymentMethod);
                      SELECT SCOPE_IDENTITY();";
 
             SqlCommand comnd = new SqlCommand(query, connection);
 
             comnd.Parameters.AddWithValue("@StudentName", StudentName);
             comnd.Parameters.AddWithValue("@CourseName", CourseName);
-            comnd.Parameters.AddWithValue("@@PayMentDate", PaymanetData);
+            comnd.Parameters.AddWithValue("@PayMentDate", PaymanetData);
             comnd.Parameters.AddWithValue("@AmountPaid", AmountOFpaid);
-            comnd.Parameters.AddWithValue("@@PaymentMethod", PaymentMethod);
+            comnd.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
 
             try
             {

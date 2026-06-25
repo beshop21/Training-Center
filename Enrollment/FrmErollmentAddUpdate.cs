@@ -147,5 +147,10 @@ namespace Training_Center
         {
 
         }
+
+        private void tgSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
