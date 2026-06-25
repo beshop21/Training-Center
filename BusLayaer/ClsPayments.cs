@@ -1,6 +1,7 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Policy;
@@ -55,7 +56,18 @@ namespace BusLayaer
 
         }
 
+        public static ClsPayments Find(int id)
+        {
+            string studentname = ""; string coursename = ""; DateTime paydate = DateTime.Now; float amountpaid = -1;
+            string paymentMethod = "";
 
+            if (PaymentsData.GetPaymentByID(id, ref studentname, ref coursename, ref paydate, ref amountpaid, ref paymentMethod)) { 
+                return new ClsPayments(id, studentname, coursename, paydate, amountpaid, paymentMethod);
+
+            }
+            else
+                return null;
+        }
         private bool _Update()
         {
             return PaymentsData.UpdatePayments(this.PaymentID, this.StudentName, this.CourseName, this.PaymentDate, this.AmountPaid, this.PaymentMethod);
@@ -90,7 +102,10 @@ namespace BusLayaer
             return false;
         }
 
-
+        public static DataTable GetAll()
+        {
+            return PaymentsData.GetAllRecode();
+        }
 
     }
 }

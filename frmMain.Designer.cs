@@ -35,6 +35,7 @@
             this.UserstoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingstoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripPayments = new System.Windows.Forms.ToolStripMenuItem();
             this.TrainingStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,10 +47,11 @@
             this.CoursestoolStrip,
             this.EnrollmentstoolStrip,
             this.UserstoolStrip,
+            this.toolStripPayments,
             this.SettingstoolStrip});
             this.TrainingStrip.Location = new System.Drawing.Point(0, 0);
             this.TrainingStrip.Name = "TrainingStrip";
-            this.TrainingStrip.Size = new System.Drawing.Size(954, 72);
+            this.TrainingStrip.Size = new System.Drawing.Size(1003, 72);
             this.TrainingStrip.TabIndex = 1;
             this.TrainingStrip.Text = "TrainingStrip";
             // 
@@ -107,16 +109,26 @@
             this.pictureBox1.Image = global::Training_Center.Properties.Resources.online_banking_black_icon_bundle_for_secure_digital_finance_payment_and_account_management_vector;
             this.pictureBox1.Location = new System.Drawing.Point(0, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(954, 378);
+            this.pictureBox1.Size = new System.Drawing.Size(1003, 378);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // toolStripPayments
+            // 
+            this.toolStripPayments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripPayments.Image = global::Training_Center.Properties.Resources.money_32;
+            this.toolStripPayments.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripPayments.Name = "toolStripPayments";
+            this.toolStripPayments.Size = new System.Drawing.Size(129, 68);
+            this.toolStripPayments.Text = "Payments";
+            this.toolStripPayments.Click += new System.EventHandler(this.toolStripPayments_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 450);
+            this.ClientSize = new System.Drawing.Size(1003, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TrainingStrip);
             this.Name = "frmMain";
@@ -138,6 +150,7 @@
         private System.Windows.Forms.ToolStripMenuItem UserstoolStrip;
         private System.Windows.Forms.ToolStripMenuItem SettingstoolStrip;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripPayments;
     }
 }
 

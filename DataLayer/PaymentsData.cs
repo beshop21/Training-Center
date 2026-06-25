@@ -121,14 +121,14 @@ namespace DataLayer
         }
 
 
-        public static bool GetCourseByID(int id, ref string Title, ref int Hourse,
-    ref float Price, ref DateTime StartDate, ref bool IsActive)
+        public static bool GetPaymentByID(int id, ref string StudentName, ref string CourseName,
+    ref DateTime PaymentDate, ref float AmountofPay, ref string PaymentMethod)
         {
             bool isfound = false;
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string qeury = "select * from Courses where CourseID=@CourseID";
+            string qeury = "select * from Payments where paymentID=@paymentID";
 
             SqlCommand commd = new SqlCommand(qeury, connection);
 
@@ -143,11 +143,11 @@ namespace DataLayer
                 if (reader.Read())
                 {
                     isfound = true;
-                    Title = (string)reader["Title"];
-                    Hourse = (int)reader["Hourse"];
-                    Price = Convert.ToSingle(reader["Price"]);
-                    StartDate = (DateTime)reader["StartDate"];
-                    IsActive = (bool)reader["IsActive"];
+                    StudentName = (string)reader["StudentName"];
+                    CourseName = (string)reader["CourseName"];
+                    PaymentDate = (DateTime)reader["PayMentDate"];
+                    AmountofPay = (float)reader["AmountPaid"];
+                    PaymentMethod = (string)reader["PaymentMethod"];
                 }
 
                 reader.Close();
@@ -211,7 +211,7 @@ namespace DataLayer
         {
             DataTable tb = new DataTable();
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
-            string query = "select * from Courses";
+            string query = "select * from Payments";
             SqlCommand command = new SqlCommand(query, connection);
             try
             {

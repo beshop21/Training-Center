@@ -91,6 +91,12 @@
     <Compile Include="FrmPaymentAddUpdate.Designer.cs">
       <DependentUpon>FrmPaymentAddUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPaymentLIst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaymentLIst.Designer.cs">
+      <DependentUpon>FrmPaymentLIst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\AddAndUpdateStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPaymentAddUpdate.resx">
       <DependentUpon>FrmPaymentAddUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaymentLIst.resx">
+      <DependentUpon>FrmPaymentLIst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddAndUpdateStudents.resx">
       <DependentUpon>AddAndUpdateStudents.cs</DependentUpon>

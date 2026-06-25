@@ -34,5 +34,11 @@ namespace Training_Center
             Form frm = new FrmEnrollmentMange();
             frm.ShowDialog();
         }
+
+        private void toolStripPayments_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmPaymentLIst();
+            frm.ShowDialog();
+        }
     }
 }

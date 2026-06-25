@@ -59,7 +59,7 @@ namespace Training_Center
 
         private void _LoadData()
         {
-
+         
         }
         
 
