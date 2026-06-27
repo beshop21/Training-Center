@@ -95,14 +95,14 @@ namespace DataLayer
         }
 
 
-        public static bool DeleteCourse(int id)
+        public static bool DeletePayment(int id)
         {
             int effectnumber = -1;
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string query = "delete from Courses where CourseID=@CourseID";
+            string query = "delete from Payments where paymentID=@paymentID";
             SqlCommand commd = new SqlCommand(query, connection);
-            commd.Parameters.AddWithValue("@CourseID", id);
+            commd.Parameters.AddWithValue("@paymentID", id);
             try
             {
                 connection.Open();

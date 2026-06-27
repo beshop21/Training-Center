@@ -18,7 +18,7 @@ namespace DataLayer
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string query = "select StudentsID from Enrollments where CoursesID=@CoursesID";
+            string query = @"select 1 from Enrollments where StudentsID=@StudentsID and CoursesID=@CoursesID";
 
             SqlCommand command = new SqlCommand(query, connection);
 

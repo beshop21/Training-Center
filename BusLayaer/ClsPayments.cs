@@ -107,5 +107,9 @@ namespace BusLayaer
             return PaymentsData.GetAllRecode();
         }
 
+        public static bool Delete(int id)
+        {
+            return PaymentsData.DeletePayment(id);
+        }
     }
 }

@@ -103,5 +103,12 @@ namespace Training_Center
 
             
             }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Form frm = new AddAndUpdateStudents();
+            frm.ShowDialog();
+            _GetallStud();
+        }
     }
 }
