@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -54,18 +55,16 @@ namespace DataLayer
 
             SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
 
-            string query = @"UPDATE Users
-                     SET Username=@Username,
-                         Password=@Password,
-                         Role=@Role
-                     WHERE UserID=@UserID";
+            string query = @"update Users set UserName=@UserName,
+                                             PasswordHash=@PasswordHash,
+                                             Role_ID=@Role_ID where UserID=@UserID";
 
             SqlCommand cmd = new SqlCommand(query, connection);
 
             cmd.Parameters.AddWithValue("@UserID", UserID);
-            cmd.Parameters.AddWithValue("@Username", Username);
-            cmd.Parameters.AddWithValue("@Password", Password);
-            cmd.Parameters.AddWithValue("@Role", Role);
+            cmd.Parameters.AddWithValue("@UserName", Username);
+            cmd.Parameters.AddWithValue("@@PasswordHash", Password);
+            cmd.Parameters.AddWithValue("@Role_ID", Role);
 
             try
             {
@@ -81,6 +80,35 @@ namespace DataLayer
             }
 
             return EffectNumber > 0;
+        }
+
+
+        public static DataTable GetAllUsers()
+        {
+            DataTable tb = new DataTable();
+
+            SqlConnection connection = new SqlConnection(DataSettings.Stringconnection);
+            string query = "select * from Users";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    tb.Load(reader);
+                }
+                reader.Close();
+            }catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return tb;
         }
 
     }
